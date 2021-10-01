@@ -1,6 +1,6 @@
 import DWP from '../components/Page/DWP/DWP'
 import Layout from '../components/Layout/Layout'
-import { getCobaltSectionPage } from '../lib/cobalt-cms/cobalt-api'
+import { getCobaltPage } from '../lib/cobalt-cms/cobalt-api'
 
 export default function Home({ pageData }) {
   return (
@@ -11,13 +11,14 @@ export default function Home({ pageData }) {
 }
 
 export async function getStaticProps() {
-  const pageData = await getCobaltSectionPage('/');
+  console.log('RENDERING: /');
+  const pageData = await getCobaltPage('/');
 
   return {
       props: {
           pageData
       },
-      revalidate: 30
+      revalidate: 5
   }
 
 }

@@ -1,0 +1,762 @@
+/* ==========================================================================
+   Remodal's necessary styles
+   ========================================================================== */
+/* Hide scroll bar */
+html.remodal-is-locked {
+  overflow: hidden;
+}
+
+.remodal-is-locked .GLtext {
+  height:500px;
+}
+/* Anti FOUC */
+.remodal,
+[data-remodal-id] {
+  display: none;
+}
+/* Necessary styles of the overlay */
+.remodal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+  display: none;
+}
+/* Necessary styles of the wrapper */
+.remodal-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+}
+.remodal-wrapper:after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -0.05em;
+  content: "";
+}
+/* Fix iPad, iPhone glitches */
+.remodal-overlay,
+.remodal-wrapper {
+  backface-visibility: hidden;
+}
+/* Necessary styles of the modal dialog */
+.remodal {
+  position: relative;
+  text-size-adjust: 100%;
+}
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block;
+}
+/* ==========================================================================
+   Remodal's default mobile first theme
+   ========================================================================== */
+/* Default theme styles for the background */
+.remodal-bg.remodal-is-opening,
+.remodal-bg.remodal-is-opened {
+  filter: blur(3px);
+}
+/* Default theme styles of the overlay */
+.remodal-overlay {
+  background: rgba(43, 46, 56, 0.9);
+}
+.remodal-overlay.remodal-is-opening,
+.remodal-overlay.remodal-is-closing {
+  animation-fill-mode: forwards;
+}
+.remodal-overlay.remodal-is-opening {
+  animation: remodal-overlay-opening-keyframes 0.3s;
+}
+.remodal-overlay.remodal-is-closing {
+  animation: remodal-overlay-closing-keyframes 0.3s;
+}
+/* Default theme styles of the wrapper */
+.remodal-wrapper {
+  padding: 0;
+}
+/* Default theme styles of the modal dialog */
+.remodal {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 35px;
+  transform: translate3d(0, 0, 0);
+  color: #2b2e38;
+  background: #fff;
+}
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing {
+  animation-fill-mode: forwards;
+}
+.remodal.remodal-is-opening {
+  animation: remodal-opening-keyframes 0.3s;
+}
+.remodal.remodal-is-closing {
+  animation: remodal-closing-keyframes 0.3s;
+}
+/* Vertical align of the modal dialog */
+.remodal,
+.remodal-wrapper:after {
+  vertical-align: middle;
+}
+/* Close button */
+.remodal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  overflow: visible;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: none;
+  color: #95979c;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+.remodal-close:hover {
+  color: #2b2e38;
+}
+.remodal-close:before {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+  font-size: 25px;
+  line-height: 35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 35px;
+  content: "\00d7";
+  text-align: center;
+}
+/* Dialog buttons */
+.remodal-confirm,
+.remodal-cancel,
+.remodal-clear {
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  min-width: 90px;
+  margin: 0;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  float: right;
+}
+.remodal-confirm {
+  color: #FFFFFF;
+  background: #009388;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.remodal-confirm:hover {
+  color: #FFFFFF;
+  background: #408887;
+}
+.remodal-cancel {
+  color: #FFFFFF;
+  background: #e57373;
+}
+.remodal-cancel:hover {
+  background: #ef5350;
+}
+.remodal-clear {
+  color: #FFFFFF;
+  background: #7fa7e5;
+}
+.remodal-clear:hover {
+  background: #33abef;
+}
+/* Remove inner padding and border in Firefox 4+ for the button tag. */
+.remodal-confirm::-moz-focus-inner,
+.remodal-cancel::-moz-focus-inner,
+.remodal-clear::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+/* Keyframes
+   ========================================================================== */
+@keyframes remodal-opening-keyframes {
+  from {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes remodal-closing-keyframes {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+@keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* Media queries
+   ========================================================================== */
+@media only screen and (min-width: 641px) {
+  .remodal {
+    max-width: 880px;
+  }
+}
+/* IE8
+   ========================================================================== */
+.lt-ie9 .remodal-overlay {
+  background: #2b2e38;
+}
+.lt-ie9 .remodal {
+  width: 880px;
+}
+
+/* IE8 custom
+   ========================================================================== */
+.lt-ie9 .remodal-overlay {
+  background: #262C2F;
+}
+.lt-ie9 .remodal {
+  width: 880px;
+}
+
+@media screen and (max-width: 767px) {
+  .remodal-wrapper {
+    padding: 0;
+  }
+  .remodal {
+    margin: 0 auto;
+    width:95%;
+  }
+}
+/* custom login remodal */
+.remodal-overlay {
+  background: rgba(38, 44, 47, 0.4);
+}
+.remodal {
+  border: 8px solid #C2C1C5;
+  color: #3A4146;
+  padding: 0;
+}
+.remodal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  overflow: visible;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: none;
+  color: #95979c;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  z-index: 9;
+}
+.remodal-close:before {
+  font-family: "fontAwesome"!important;
+  font-size: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 40px;
+  content: "\f00d";
+  text-align: center;
+}
+.GLremodalContainer {
+  margin: 0;
+  padding:20px 10px 10px;
+}
+.GLremodalSocialLogin {
+  background-color: #FDFDFD;
+  padding: 35px;
+}
+.GLremodalSignUp, .GLremodalSignIn {
+  padding: 35px;
+  border-top: 1px solid #DCDBDB;
+  border-left: none;
+}
+form#GLsignUp, form#GLsignIn {
+  width: 100%;
+}
+.GLremodalSignUp input, .GLremodalSignIn input, .GLremodalPaywall input {
+  background: #FFFFFF;
+  color: #888888;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  height: 2.5em;
+  line-height: 2.5em;
+  margin: 0 0 1.5em;
+  padding: 0 1.5em;
+  text-align: left;
+  outline: none;
+  width: 100%;
+}
+.GLremodalSignUpPrice {
+  padding-top: 20px;
+  border-top: 1px solid #DCDBDB;
+}
+.GLremodalSignUp .remodal-confirm, .GLremodalSignUp .remodal-cancel,
+.GLremodalSignIn .remodal-confirm, .GLremodalSignIn .remodal-cancel,
+.GLremodalSignUpPrice .remodal-confirm, .GLremodalSignUpPrice .remodal-cancel {
+  float: none; 
+}
+.GLremodalContainer h4, .GLremodalContainer h3 {
+  font-family: 'pt_serifbold',Serif;
+  margin-bottom: 45px;
+  text-align: left;
+}
+.GLremodalContainer h3 {
+  margin-top: 0;
+}
+.GLremodalSignUpPrice h4 {
+  margin-bottom: 10px;
+}
+.GLremodalSignUpPrice p, .GLremodalSignIn p {
+  margin-top: 20px;
+  text-align: center;
+}
+.GLremodalSignUpPrice .panel .panel-price {
+  text-align: center;
+  color: #009388;
+  font-family: 'pt_sansregular',Sans-serif;
+  font-size: 25px;
+  margin-top: 40px;
+}
+.GLremodalSignUp p.GLmandatory, .GLremodalSignIn p.GLmandatory {
+  font-family: 'pt_serifitalic',Serif;
+  color: #C2C1C5;
+  margin-bottom: 20px;
+}
+/*
+ * Social Buttons for Bootstrap
+ */
+.btn-social{position:relative;padding-left:44px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn-social>:first-child{position:absolute;left:0;top:0;bottom:0;width:32px;line-height:34px;font-size:1.6em;text-align:center;border-right:1px solid rgba(0,0,0,0.2)}
+.btn-social i{color:#FFFFFF;}
+.btn-social.btn-lg{padding:8px 2px;font-size:16px;line-height:1.2;border-radius:4px;padding-left:50px;margin-bottom:10px;}
+.btn-social.btn-lg>:first-child{line-height:40px;width:40px;font-size:1.2em;}
+.btn-social.btn-sm{padding-left:38px}
+.btn-social.btn-sm>:first-child{line-height:28px;width:28px;font-size:1.4em}
+.btn-social.btn-xs{padding-left:30px}
+.btn-social.btn-xs>:first-child{line-height:20px;width:20px;font-size:1.2em}
+.btn-social-icon{position:relative;padding-left:44px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:34px;width:34px;padding:0}
+.btn-social-icon>:first-child{position:absolute;left:0;top:0;bottom:0;width:32px;line-height:34px;font-size:1.6em;text-align:center;border-right:1px solid rgba(0,0,0,0.2)}
+.btn-social-icon.btn-lg{padding-left:61px}
+.btn-social-icon.btn-lg>:first-child{line-height:45px;width:45px;font-size:1.8em}
+.btn-social-icon.btn-sm{padding-left:38px}
+.btn-social-icon.btn-sm>:first-child{line-height:28px;width:28px;font-size:1.4em}
+.btn-social-icon.btn-xs{padding-left:30px}
+.btn-social-icon.btn-xs>:first-child{line-height:20px;width:20px;font-size:1.2em}
+.btn-social-icon>:first-child{border:none;text-align:center;width:100% !important}
+.btn-social-icon.btn-lg{height:45px;width:45px;padding-left:0;padding-right:0}
+.btn-social-icon.btn-sm{height:30px;width:30px;padding-left:0;padding-right:0}
+.btn-social-icon.btn-xs{height:22px;width:22px;padding-left:0;padding-right:0}
+/*fb*/
+.btn-facebook{color:#fff;background-color:#3b5998;border-color:rgba(0,0,0,0.2)}.btn-facebook:hover,.btn-facebook:focus,.btn-facebook:active,.btn-facebook.active,.open>.dropdown-toggle.btn-facebook{color:#fff;background-color:#2d4373;border-color:rgba(0,0,0,0.2)}
+.btn-facebook:active,.btn-facebook.active,.open>.dropdown-toggle.btn-facebook{background-image:none}
+.btn-facebook.disabled,.btn-facebook[disabled],fieldset[disabled] .btn-facebook,.btn-facebook.disabled:hover,.btn-facebook[disabled]:hover,fieldset[disabled] .btn-facebook:hover,.btn-facebook.disabled:focus,.btn-facebook[disabled]:focus,fieldset[disabled] .btn-facebook:focus,.btn-facebook.disabled:active,.btn-facebook[disabled]:active,fieldset[disabled] .btn-facebook:active,.btn-facebook.disabled.active,.btn-facebook[disabled].active,fieldset[disabled] .btn-facebook.active{background-color:#3b5998;border-color:rgba(0,0,0,0.2)}
+.btn-facebook .badge{color:#3b5998;background-color:#fff}
+/*g+*/
+.btn-google{color:#fff;background-color:#dd4b39;border-color:rgba(0,0,0,0.2)}.btn-google:hover,.btn-google:focus,.btn-google:active,.btn-google.active,.open>.dropdown-toggle.btn-google{color:#fff;background-color:#c23321;border-color:rgba(0,0,0,0.2)}
+.btn-google:active,.btn-google.active,.open>.dropdown-toggle.btn-google{background-image:none}
+.btn-google.disabled,.btn-google[disabled],fieldset[disabled] .btn-google,.btn-google.disabled:hover,.btn-google[disabled]:hover,fieldset[disabled] .btn-google:hover,.btn-google.disabled:focus,.btn-google[disabled]:focus,fieldset[disabled] .btn-google:focus,.btn-google.disabled:active,.btn-google[disabled]:active,fieldset[disabled] .btn-google:active,.btn-google.disabled.active,.btn-google[disabled].active,fieldset[disabled] .btn-google.active{background-color:#dd4b39;border-color:rgba(0,0,0,0.2)}
+.btn-google .badge{color:#dd4b39;background-color:#fff}
+/*tw*/
+.btn-twitter{color:#fff;background-color:#55acee;border-color:rgba(0,0,0,0.2)}.btn-twitter:hover,.btn-twitter:focus,.btn-twitter:active,.btn-twitter.active,.open>.dropdown-toggle.btn-twitter{color:#fff;background-color:#2795e9;border-color:rgba(0,0,0,0.2)}
+.btn-twitter:active,.btn-twitter.active,.open>.dropdown-toggle.btn-twitter{background-image:none}
+.btn-twitter.disabled,.btn-twitter[disabled],fieldset[disabled] .btn-twitter,.btn-twitter.disabled:hover,.btn-twitter[disabled]:hover,fieldset[disabled] .btn-twitter:hover,.btn-twitter.disabled:focus,.btn-twitter[disabled]:focus,fieldset[disabled] .btn-twitter:focus,.btn-twitter.disabled:active,.btn-twitter[disabled]:active,fieldset[disabled] .btn-twitter:active,.btn-twitter.disabled.active,.btn-twitter[disabled].active,fieldset[disabled] .btn-twitter.active{background-color:#55acee;border-color:rgba(0,0,0,0.2)}
+.btn-twitter .badge{color:#55acee;background-color:#fff}
+
+/*panel pricing*/
+.GLremodalPaywall, .GLremodalPaywallSignIn {
+}
+.GLremodalSign {
+  position: absolute;
+  top: 35px;
+  right: 16px; 
+}
+.GLremodalPaywall h4 {
+  margin-bottom: 15px;
+}
+.GLremodalPaywall .row .col-sm-4 {
+  padding-right: 0;
+}
+.panel-pricing .panel-heading {
+  padding: 15px 5px;
+  border-bottom: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.panel-pricing .panel-body {
+  background-color: #EDECEB;
+  border: 1px solid #DCDBDB;
+  font-size: 40px;
+  color: #777777;
+  padding: 15px;
+  margin: 0px;
+  min-height: 150px;
+}
+.panel-pricing .panel-footer {
+  background-color: #FFFFFF;
+  border-top: 1px solid #DCDBDB;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.panel-pricing .panel-heading .panel-standard {
+  border: 1px solid #D34B71;  
+}
+.panel-pricing .panel-heading .panel-premium {
+  border: 1px solid #E08800;  
+}
+.panel-pricing .panel-heading .panel-registration {
+  border: 1px solid #9D9E9F;  
+}
+.panel-standard,
+.btn-standard {
+  background-color: #D34B71;
+}
+.panel-premium,
+.btn-premium {
+  background-color: #E08800;
+}
+.panel-registration,
+.btn-registration {
+  background-color: #9D9E9F;
+}
+.btn-select {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.btn-select {
+  background-color: #009388;
+  color: #FFFFFF;
+}
+.btn-select:hover {
+  background-color: #408887;
+  color: #FFFFFF;
+}
+.GLremodalPaywall .text-center {
+  padding-top: 0;
+}
+.GLremodalPaywall .panel h3,
+.GLremodalSignUpPrice .panel h3,
+.GLremodalPaywall .panel p,
+.GLremodalSignUpPrice .panel p {
+  color: #FFFFFF;
+}
+.GLremodalPaywall .panel h3,
+.GLremodalSignUpPrice .panel h3 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.GLremodalPaywall .panel p,
+.GLremodalSignUpPrice .panel p {
+  font-size: 15px;
+}
+/* custom panel bootstrap */
+.panel {
+  /*border: 1px solid transparent;*/
+  border-radius: 0;
+  border: 1px solid #DCDBDB;
+}
+/* /custom panel bootstrap */
+
+@media only screen and (min-width: 768px) {
+  .remodal {
+    max-width: 880px;
+  }
+  .GLremodalSignUp, .GLremodalSignIn {
+    border-top: none;
+    border-left: 1px solid #DCDBDB;
+  }
+  form#GLsignUp, form#GLsingIn {
+    width: 65%;
+  }
+}
+
+/* upload remodal */
+.GLuploadRemodalContainer {
+  padding: 65px 35px;
+  text-align: left;
+}
+.GLuploadRemodalContainer .GLstoryTitle {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 800;
+  margin-top: 35px;
+}
+.GLuploadRemodalContainer .GLstoryByline {
+  font-family: 'pt_sansbold', sans-serif;
+  margin-top: 10px;
+  color: #666666;
+}
+.GLuploadRemodalSocialItem {
+  display: inline-table;
+  color: #61696B;
+  margin-right: 15px;
+  margin-top: 25px;
+  text-align: center;
+  padding: 5px;
+}
+@media only screen and (min-width: 768px) {
+  .remodal.GLuploadRemodal {
+    max-width: 650px;
+  }
+  .GLuploadRemodalContainer {
+    padding: 65px;
+  }
+}
+/* /upload remodal */
+
+/*my homepage*/
+.GLremodalCustom {
+  text-align: left;
+}
+.GLremodalCustom h3 {
+  padding: 35px 0 0 0;
+  margin-bottom: 15px;
+}
+.GLremodalCustom h4 {
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+.GLremodalCustom .GLremodalCustomTopics {
+  background-color: #FDFDFD;
+  padding: 35px 0 0 35px;
+}
+.GLremodalCustomTopics .GLtopicCheckList {
+  margin: 20px 0;
+}
+@media only screen and (min-width: 768px) {
+  .GLremodalCustom .GLremodalCustomTopics {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+/*checkbox*/
+.GLtopicCheckList .checkbox {
+  padding-left: 20px;
+}
+.GLtopicCheckList .checkbox label {
+display: inline-block;
+vertical-align: middle;
+position: relative;
+padding-left: 5px;
+}
+.GLtopicCheckList .checkbox label::before {
+content: "";
+display: inline-block;
+position: absolute;
+width: 17px;
+height: 17px;
+left: 0;
+margin-left: -20px;
+border: 1px solid #cccccc;
+border-radius: 3px;
+background-color: #fff;
+-webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+-o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.GLtopicCheckList .checkbox label::after {
+display: inline-block;
+position: absolute;
+width: 16px;
+height: 16px;
+left: 0;
+top: 0;
+margin-left: -20px;
+padding-left: 3px;
+padding-top: 1px;
+font-size: 11px;
+color: #555555;
+}
+.GLtopicCheckList .checkbox input[type="checkbox"] {
+opacity: 0;
+z-index: 1;
+}
+.GLtopicCheckList .checkbox input[type="checkbox"]:focus + label::before {
+outline: thin dotted;
+outline: 5px auto -webkit-focus-ring-color;
+outline-offset: -2px;
+}
+.GLtopicCheckList .checkbox input[type="checkbox"]:checked + label::after {
+font-family: 'FontAwesome';
+content: "\f00c";
+}
+.GLtopicCheckList .checkbox input[type="checkbox"]:disabled + label {
+opacity: 0.65;
+}
+.GLtopicCheckList .checkbox input[type="checkbox"]:disabled + label::before {
+background-color: #eeeeee;
+cursor: not-allowed;
+}
+.GLcheckbox input[type="checkbox"]:checked + label::before {
+background-color: #009388;
+border-color: #009388;
+}
+.GLcheckbox input[type="checkbox"]:checked + label::after {
+color: #fff;
+}
+.GLremodalCustomTopics .remodal-cancel,
+.GLremodalCustomTopics .remodal-clear,
+.GLremodalCustomTopics .remodal-confirm {
+  float: left;
+}
+.GLremodalCustomColors .remodal-cancel,
+.GLremodalCustomColors .remodal-confirm {
+  float: left;
+}
+.GLremodalCustomTopics button,
+.GLremodalCustomColors button {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+/*custom color*/
+.GLremodalCustom .GLremodalCustomColors {
+  background-color: #FFFFFF;
+  padding: 0 0 0 35px;
+  text-align: left;
+  border-top: 1px solid #DCDBDB;
+}
+.GLremodalCustomColors .GLcolorRadioList {
+  margin: 20px 0;
+  max-width: 90%;
+}
+@media only screen and (min-width: 768px) {
+  .GLremodalCustom .GLremodalCustomColors {
+    padding-top: 95px;
+    border-top: none;
+    border-left: 1px solid #DCDBDB;
+  }
+}
+/*radio btn*/
+.radio-inline+.radio-inline {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.GLcolorRadioList .radio {
+  padding-right: 20px;
+}
+.GLcolorRadioList .radio label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 5px;
+  padding-right:5px;
+  border:1px solid #DCDBDB;
+}
+.GLcolorRadioList .radio label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  margin-left: -20px;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out;
+}
+.GLcolorRadioList .radio label::after {
+  display: inline-block;
+  position: absolute;
+  content: " ";
+  width: 11px;
+  height: 11px;
+  left: 3px;
+  top: 3px;
+  margin-left: -20px;
+  border-radius: 50%;
+  background-color: #555555;
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+}
+.GLcolorRadioList .radio input[type="radio"] {
+  opacity: 0;
+  z-index: 1;
+}
+.GLcolorRadioList .radio input[type="radio"]:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.GLcolorRadioList .radio input[type="radio"]:checked + label::after {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.GLcolorRadioList .radio input[type="radio"]:disabled + label {
+  opacity: 0.65;
+}
+.GLcolorRadioList .radio input[type="radio"]:disabled + label::before {
+cursor: not-allowed; }
+.GLcolorRadioList .radio.GLradio {
+  margin-top: 10px;
+}
+.GLcolorRadioList .GLradio input[type="radio"] + label::after {
+  background-color: #428bca;
+}
+.GLcolorRadioList .GLradio input[type="radio"]:checked + label::before {
+  border-color: #428bca;
+}
+.GLcolorRadioList .GLradio input[type="radio"]:checked + label::after {
+  background-color: #428bca;
+}

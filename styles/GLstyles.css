@@ -1,0 +1,4628 @@
+* {
+    outline: none;
+  }
+  a {
+     outline: 0;
+     color:#009388;
+  }
+  body {
+    padding-top: 45px;
+    color: #321432;
+    font-family: 'pt_sansregular', sans-serif;
+    background-color: #EBEBEB;
+    text-rendering: optimizelegibility;
+  }
+  a:hover, a:focus {
+    text-decoration: none;
+      color:#009388;
+      outline: none;
+  }
+  a:visited {
+    text-decoration: none;
+    outline: none;
+  }
+  .btn:focus, .btn:active:focus, .btn.active:focus {
+      outline-color: none; outline-style: none; outline-width: 0; outline-offset: 0;
+  }
+  h1, .h1 {
+    font-size: 52px;
+    line-height: 56px;
+  }
+  h2, .h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 0;
+    text-rendering: optimizelegibility;
+  }
+  h1, h2, h3, h4, h5, h6, p {
+   font-family: 'pt_serifregular', serif;
+   margin-bottom: 5px;
+   margin-top: 5px;
+   text-rendering: optimizelegibility;
+  }
+  h1, h2 {
+   font-family: 'pt_serifbold', serif;
+   
+  }
+  h2 a {
+    color: #321432;
+  }
+  h2 a:hover {
+    color: #009388/*7C898F*/;
+     -webkit-transition: all 100ms ease-out;
+      -moz-transition: all 100ms ease-out;
+      -o-transition: all 100ms ease-out;
+      -ms-transition: all 100ms ease-out;
+      transition: all 100ms ease-out;
+  }
+  ul, ol {
+    padding: 0;
+  }
+  i {
+    color: #383F43;
+  }
+  figure {
+    position: relative;
+  }
+  img {
+    width: 100%;
+  }
+  .left {
+    float: left;
+    margin: 0 20px 10px 0;
+  }
+  .right {
+    float: right;
+    margin: 0 0 10px 20px;
+  }
+  .center {
+    margin: 0 auto;
+    width: 50%;
+  }
+  :focus {
+    outline: none;
+  }
+  .text-center {
+    padding-top: 20px;
+  }
+  .col-xs-12 {
+    background-color: #FFFFFF;
+  }
+  #sidebar {
+    height: 100%;
+    padding-right: 0;
+  }
+  .container {
+    background-color: #FFFFFF; 
+  }
+  
+  @media screen and (min-width: 768px) {
+    #sidebar {
+      position: fixed;
+      width: 145px;
+    }
+    #GLmain {
+      margin-left: 145px;
+      float:none;
+      /*width: auto;*/
+      width: calc(100% - 145px);
+      margin-top: -51px;
+      display: table;
+      position: relative;
+    }
+  }
+  
+  /* collapsed sidebar styles */
+  @media screen and (max-width: 767px) {
+    .row-offcanvas {
+      position: relative;
+      -webkit-transition: all 0.25s ease-out;
+      -moz-transition: all 0.25s ease-out;
+      transition: all 0.25s ease-out;
+    }
+    .row-offcanvas-right
+    .sidebar-offcanvas {
+      right: -145px;
+    }
+   .row-offcanvas-right.active {
+      right: 145px;
+    }
+    .row-offcanvas-left.active {
+      left: 145px;
+    }
+    .active .sidebar-offcanvas {
+      position: fixed;
+      top: 45px;
+      left:0;
+      width: 145px;
+    }
+    .sidebar-offcanvas {
+      position: fixed;
+      top: 0;
+      left:-145px;
+      width: 145px;
+    }
+    #sidebar {
+      padding-top:0;
+    }
+  }
+  
+  /****************************************************************
+   * Bootstrap custom
+   ****************************************************************/
+  @media (min-width: 768px){
+    .container {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 992px){
+    .container {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 1280px){
+    .container {
+      width: 1280px;
+    }
+  }
+  
+  /*****************************************************************
+   * Sidebar Nav - custom style
+   *****************************************************************/
+  .col-xs-12 {
+    z-index: 0;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  .container>.navbar-header {
+    background-color: #000000/*454D52*/;
+  }
+  .navbar {
+    min-height: 45px;
+    margin-bottom: 0;
+  }
+  .navbar-default {
+    background-color: #454D52;
+    border: 0;
+    height: 45px;
+  }
+  .navbar-default .navbar-toggle {
+    border: none;
+  }
+  .navbar-toggle {
+    float: left;
+    margin-left: 15px;
+    margin-right: 0;
+    padding: 4px 10px;
+  }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFFFFF;
+  }
+  .navbar-toggle .icon-bar {
+    height: 4px;
+  }
+  .navbar-brand {
+    font-size: 25px;
+    line-height: 25px;
+    height: 45px;
+    padding: 7px 0 0 0;
+  }
+  .navbar-default .navbar-brand {
+    font-family: 'puritanregular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #FFFFFF;
+    background-image: url('/img/navbar-brand-logo.png');
+    width: 114px;
+    height: 36px;
+    margin-top: 6px;
+  }
+  .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #FFFFFF;
+  }
+  .navbar-header .GLheaderSocial {
+    width: 170px;
+    float: right;
+    height: 45px;
+    padding: 10px;
+  }
+  .navbar-header .GLheaderSocialItem {
+    display: inline;
+  }
+  .navbar-header .GLheaderSocialItem a span.fa {
+    color: #FFFFFF;
+    margin-left: 20px;
+    line-height: 45px;
+    font-size: 18px;
+  }
+  .nav>li>a:hover, .nav>li>a:focus {
+    background-color: transparent;
+  }
+  a span.fa.fa-angle-right {
+    text-decoration: none;
+    color: #999999;
+    background-color: transparent;
+    display: block;
+    font-size: 20px;
+    float: right;
+  }
+  a:hover span.fa-angle-right {
+    background-color: #009388;
+    color: #FFFFFF;
+  }
+  #sidebar .nav {
+    width: 100%;
+    height: 100%;
+    background-color: #2A343F;
+  }
+  #sidebar {
+    padding-top: 0;
+    padding-left: 0;
+    z-index: 20;
+  }
+  #sidebar li a {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 800;
+  }
+  #sidebar li a:hover {
+    background-color: #009388;
+  }
+  #sidebar li:hover > a {
+    background-color: #009388;
+  }
+  .nav>li {
+    position: inherit;
+  }
+  #sidebar .GLnavSocial {
+    height: 30px;
+    background-color: #045484;
+    display: none;
+  }
+  #sidebar .GLnavSocialItem {
+    display: inline;
+  }
+  #sidebar .GLnavSocialItem a span.fa {
+    color: #FFFFFF;
+    margin-left: 17px;
+    line-height: 30px;
+  }
+  #sidebar .GLnavSocialItem a span.fa:hover {
+    color: #00937D;
+  }
+  #sidebar .GLnavLogo {
+    height: 145px;
+    background-color: #2A343F;
+    display: none;
+  }
+  #sidebar .GLnavLogo img {
+    margin: 80px auto 0
+  }
+  #sidebar .GLnavSearch {
+    height: 40px;
+  }
+  #search input[type="text"] {
+    background: url(/img/icons/icon-search.png) no-repeat 10px 13px #394149;
+    width: 145px;
+    position: relative;
+    color: #FFFFFF;
+    border: 0 none;
+    font-size: 13px;
+    padding-left: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    height: 40px;
+    border-top: 1px solid #5B5B5B;
+    border-bottom: 1px solid #5B5B5B;
+    outline: none;
+    display: block;
+  }
+  #search input[type="text"]::-webkit-input-placeholder { /* WebKit browsers */
+    color: #FFFFFF;
+  }
+  #search input[type="text"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #FFFFFF;
+    opacity: 1;
+  }
+  #search input[type="text"]::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #FFFFFF;
+    opacity: 1;
+  }
+  #search input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #FFFFFF;
+  }
+  /* nav GLpremium */
+  .nav .GLpremium {
+    display: inline-block;
+    width: 100%;
+    height: 38px;
+  }
+  #sidebar li.GLpremium a {
+    font-size: 13px;
+    white-space: nowrap;
+    padding: 13px 9px 10px 14px;
+    background-color: transparent;
+    width: 49%;
+    float: right;
+  }
+  #sidebar li.GLpremium a:first-child {
+    width: 48%;
+    float: left;
+  }
+  #sidebar li.GLpremium a:hover {
+    background-color: #009388;
+  }
+  #sidebar li.GLpremium .GLpremiumSeparator:after {
+    content: '|';
+    color: #FFFFFF;
+    width: 2%;
+    line-height: 35px;
+    float: left;
+    padding-top: 4px;
+  }
+  /* nav GLpremiumLogged */
+  .nav .GLpremiumLogged {
+    position: relative;
+    display: block;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 800;
+    background-color: #4C626D;
+  }
+  #sidebar li.GLpremiumLogged a:before {
+    font-family: 'FontAwesome';
+    content: "\f007";
+    margin-right: 5px;
+  }
+  #sidebar li .arrow {
+    border-style: solid;
+    position: absolute;
+  }
+  #sidebar li .bottom {
+    border-color: #FFFFFF transparent transparent transparent;
+    border-width: 4px 4px 0px 4px;
+    bottom: 5px;
+    left: 15px;
+  }
+  #sidebar li .bottom:after {
+    border: none;
+  }
+  #sidebar #GLloggedOpen {
+    background-color: #4C626D;
+  }
+  #sidebar #GLloggedOpen .panel-body {
+    padding: 0;
+  }
+  #sidebar #GLloggedOpen .GLpremiumLoggedItemEdit {
+    display: inline-flex;
+    width: 100%;
+  }
+  #sidebar #GLloggedOpen .GLpremiumLoggedItemEdit a {
+    white-space: nowrap;
+    padding: 10px 9px 10px 14px;
+    background-color: transparent;
+    width: 45%;
+    text-transform: capitalize;
+    color: #009388;
+  }
+  #sidebar #GLloggedOpen .GLpremiumLoggedItemEdit a:first-child {
+    width: 55%;
+  }
+  #sidebar #GLloggedOpen .GLpremiumLoggedItemEdit a:hover {
+    background-color: #009388;
+    color: #FFFFFF;
+  }
+  #sidebar .GLpremiumLoggedItemEdit .GLpremiumSeparator:after {
+    content: '|';
+    color: #FFFFFF;
+    width: 2%;
+    line-height: 38px;
+  }
+  #sidebar #GLloggedOpen .GLpremiumLoggedItemMyhome {
+    display: block;
+    width: 100%;
+  }
+  #sidebar #GLloggedOpen .GLpremiumLoggedItemEdit a,
+  #sidebar #GLloggedOpen .GLpremiumLoggedItemMyhome a {
+    padding: 10px 15px;
+  }
+  #sidebar #GLloggedOpen .GLpremiumLoggedItemMyhome a {
+    color: #FFFFFF;
+    padding: 10px 15px;
+    display: block;
+  }
+  @media screen and (min-width: 768px) {
+    #sidebar #GLloggedOpen .GLpremiumLoggedItemEdit a {
+      width: 50%;
+    }
+    #sidebar #GLloggedOpen .GLpremiumLoggedItemEdit a:first-child {
+      width: 50%;
+    }
+    /*.premiumContent .GLcontent {
+      height:500px;
+    }*/
+    
+    .premiumContent .GLtext .lockContent{
+      z-index:9999;
+      float:left;
+      height:40%;
+      width: 100%;
+      position: absolute;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+17&amp;0.38+0,0.5+8,1+16 */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0.38) 0%, rgba(255,255,255,0.5) 8%, rgba(255,255,255,1) 16%, rgba(255,255,255,1) 17%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.38) 0%,rgba(255,255,255,0.5) 8%,rgba(255,255,255,1) 16%,rgba(255,255,255,1) 17%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,0.38) 0%,rgba(255,255,255,0.5) 8%,rgba(255,255,255,1) 16%,rgba(255,255,255,1) 17%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  
+    }
+    .navbar-header .GLheaderSocial {
+        padding: 0px;
+      }
+      
+      .GLnavSocialItem a{
+          padding: 0px;
+      }
+  }
+  /*start transition*/
+  #sidebar .GLexpand {
+    z-index: -10;
+    width: 145px;
+    background-color: #009388;
+    list-style: none;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: left .5s ease-in-out;
+    height: 100%;
+  }
+  #sidebar .GLexpander:hover .GLexpand {
+    left: 145px;
+  }
+  @media screen and (min-width: 768px) {
+    #sidebar .GLexpand {
+      left: 0;
+    }
+  }
+  /*end transition*/
+  #sidebar .GLsubnavCategory {
+    font-family: 'pt_serifregular', serif;
+    color: #131413;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 10px 0 14px;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+  #sidebar li ul li a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+  }
+  /*#sidebar li ul li:last-child a {
+    padding-bottom: 40px;
+  }*/
+  #sidebar li ul li a:hover {
+    background-color: #408887;
+  }
+  #sidebar li.GLsubnavStory a {
+    height: auto;
+    text-transform: none;
+    font-size: 14px;
+    background-color: #408887;
+  }
+  #sidebar li.GLsubnavStory time {
+    display: block;
+    text-transform: uppercase;
+    line-height: 13px;
+    margin: 0 0 6px;
+    font: 13px 'pt_sansregular',sans-serif;
+    color: #FFFFFF;
+  }
+  #sidebar li.GLsubnavStory img {
+    margin: 10px 0 8px;
+    width: 90%;
+    display: block;
+  }
+  @media screen and (min-width: 768px) {
+    .navbar-default {
+      display: none;
+    }
+    #sidebar .GLnavLogo {
+      display: block;
+      background-image: url('/img/nav-logo.png');
+      background-repeat: no-repeat;
+      background-position-y: 85px;
+      width: 145px;
+    }
+    #sidebar .GLnavLogo h1 {
+      margin:0;
+    }
+    #sidebar .GLnavLogo a {
+      display: block;
+      height: 145px;
+    }
+    #sidebar .GLnavSocial {
+      display: block;
+    }
+    #sidebar {
+      margin-top: -45px;
+    }
+  }
+  /*nav blog + special*/
+  #sidebar li.GLnavSpecial a {
+    text-transform: capitalize;
+  }
+  #sidebar li.GLnavSpecial ~ li.GLnavSpecial a {
+    border-top: none;
+  }
+  #sidebar li.GLnavSpecial form {
+    position: relative;
+    display: table;
+    width: 100%;
+  }
+  #sidebar li.GLnavSpecial #myUpSearch:hover {
+      background-color: #009388;
+      cursor: pointer;
+  }
+  #sidebar li.GLnavBlog a i,
+  #sidebar li.GLnavSpecial a i,
+  #sidebar li.GLnavSpecial form i {
+    color: #FFFFFF;
+    margin-right: 5px;
+  }
+  #sidebar li.GLnavSpecial form i {
+    padding: 10px 0 10px 15px;
+    float: left;
+  }
+  #sidebar li.GLnavSpecial form input[type=submit] {
+    text-transform: capitalize;
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 800;
+    position: relative;
+    display: block;
+    padding: 10px 31px 10px 0;
+    background-color: transparent;
+    text-decoration: none;
+    outline: 0;
+    border: 0;
+    /*float: left;*/
+  }
+  #sidebar li.GLnavSpecial form:before {
+    content: "\f093";
+    font-family: FontAwesome;
+    color: #FFF;
+    margin-right: 5px;
+    padding: 10px 0px 10px 15px;
+    float: left;
+  }
+  #sidebar li.GLnavSpecialActive a:before {
+    content: "\f093";
+    font-family: FontAwesome;
+    color: #FFF;
+    margin-right: 5px;
+    padding: 0 0px 10px 0;
+    float: left;
+  }
+  /*****************************************************************
+   * Head
+   *****************************************************************/
+  .GLhead .GLheadTitle {
+    display: none;
+  }
+  .GLhead .GLheadSectionLabel {
+    display: none;
+  }
+  .GLhead .GLheadTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: calc(100% + 50px);
+    background-color: #F7F7F7;
+    margin: 0px -25px;
+    border-bottom: 1px dotted #CCC;
+    color: #321432;
+    line-height: 30px;
+    text-indent: 50px;
+  }
+  .GLhead .GLheadTop li {
+    display: inline;
+  }
+  .GLhead .GLheadTop li:after {
+    content: '|';
+    margin: 0 5px;
+  }
+  .GLhead .GLheadTop li a {
+    color: #321432;
+    text-decoration: underline;
+  }
+  .GLhead .GLheadTop li a:hover {
+    color: #451C46;
+  }
+  .GLheadDate {
+    float: left;
+    position: relative;
+    width: 50%;
+    color: #939799;
+    font-size: 11px;
+    line-height: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    vertical-align: bottom;
+    display: inline-block;
+    margin-top: 45px;
+  }
+  .GLheadDate p {
+    font-family: 'pt_sansregular', sans-serif;
+  }
+  #GLdate {
+    margin: 0 5px 0 0;
+    display: block;
+    clear:left;
+  }
+  #GLhour {
+    display: inline;
+  }
+  #GLweather {
+    display: block;
+    width: 50%;
+    float: right;
+  }
+  @media screen and (min-width: 768px) {
+    .GLhead {
+      position: relative;
+      display: table;
+      width: 100%;
+      padding-top: 45px;
+      height: 112px;
+    }
+    .GLhead:after {
+      border-top-style: solid;
+      border-bottom-style: solid;
+      border-color: #000;
+      border-top-width: 7px;
+      border-bottom-width: 1px;
+      height: 11px;
+      content: '';
+      display: block;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      top: calc(50% - -70px);
+    }
+    .GLhead .GLheadTop {
+      text-indent: 25px;
+    }
+    .GLhead .GLheadTitle {
+      text-align: center;
+      position: relative;
+      margin-bottom: -16px;
+      letter-spacing: -2px;
+      display: block;
+      margin: -2px auto;
+      width: 248px;
+      height: 59px;
+      background-image: url(/img/head-logo.png);
+    }
+    .GLhead .GLheadTitle.olympic {
+      background-image: url(/img/header/head-logo-olympic.png);
+    }
+    .GLhead .GLheadTitle.expo {
+      background-image: url(/img/header/head-logo-expo.png);
+      }
+    .GLhead .GLheadSectionLabel {
+      position: absolute;
+      font-family: 'pt_serifbold', serif;
+      font-weight: 800;
+      font-size: 23px;
+      text-transform: uppercase;
+      left: 40%;
+      top: 105px;
+      background-color: #FFFFFF;
+      text-align:center;
+      width: 230px;
+      z-index: 9;
+      display: block;
+      color: #000000;
+    }
+    .GLheadDate {
+      top: 20px;
+      width: 15%;
+      margin-top: 0;
+    }
+    #GLdate {
+      line-height:20px;
+      float:none;
+      margin:0;
+    }
+    #GLhour {
+      line-height:20px;
+      display:block;
+      margin:0;
+    }
+  }
+  /*****************************************************************
+   * Section Page
+   *****************************************************************/
+  .GLsection {
+    margin-top: 0;
+  }
+  .GLsection .GLsectionLabel {
+    text-transform: uppercase;
+    font-family: 'pt_serifbold', serif;
+    font-weight: 800;
+    font-size: 18px;
+    margin: 25px 0;
+    float: left;
+    width: 100%;
+  }
+  .GLsection time {
+    text-transform: uppercase;
+    line-height: 12px;
+    font: 11px 'pt_sansbold', sans-serif;
+    letter-spacing: .5px;
+    color: #909090;
+  }
+  .GLstoryLocation .fa.fa-lock {
+    line-height: 12px;
+    font: 11px 'FontAwesome';
+    color: #909090;
+    margin-left: 5px;
+  }
+  .GLsection .GLsectionLabel span {
+    font-size: 11px;
+    font-weight: normal;
+    margin-left: 5px;
+  }
+  .GLsection .GLstorySummary {
+    font-size: 16px;
+    line-height: 20px;
+    color:rgba(27, 20, 50, 0.74);
+    /*color: #454D53;*/
+    font-family: 'pt_serifregular', serif;
+  }
+  /***************/
+  .GLlatestStory  {
+    width: 100%;
+    position: relative;
+    display: table;
+  }
+  
+  .GLlatestStory.interactiveStoryTelling .GLlatestStoryTop .GLstoryFigure:before, .GL1vertical2StoryItemBig.interactiveStoryTelling .GLstoryFigure:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 48px;
+    height: 48px;
+    color: white;
+    background: url(/img/icons/storytelling-icon.png) no-repeat center center #ffffff;
+    background-size: 80%;
+  }
+  
+  .GLlatestStory .GLlatestStoryTop .GLstoryFigure {
+    width: 100%;
+    margin-bottom: 10px;
+    float: left;
+    position: relative;
+  }
+  .GLlatestStory .GLlatestStoryTop {
+    display: table;
+    position:relative;
+  }
+  .GLlatestStory .GLlatestStoryTop h2 {
+    font-size: 36px;
+    line-height: 42px;
+    font-family: 'pt_serifbold', serif;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  .GLlatestStory .GLstoryByline {
+    color: #666666;
+    font-family: 'pt_sansbold', sans-serif;
+    margin: 0;
+    margin-top: 0;
+  }
+  .GLlatestStory .GLstoryByline a {
+    text-decoration: none;
+  }
+  /***************/
+  .GLlatestStory .GLlatestStory4vertical {
+    width: 100%;
+    float: left;
+    border-top: 1px solid #C8C9CA;
+    margin-top: 30px;
+    padding-top: 15px;
+    display: block;
+  }
+  .GLlatestStory .GLlatestStory4verticalItem {
+    width: 100%;
+    float: left;
+    margin-bottom: 40px;
+  }
+  .GLlatestStory4verticalItem .GLstoryFigure {
+    width: 33%;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+    height: 100%;
+  }
+  .GLlatestStory4verticalItem .GLstoryLocation {
+    margin: 0;
+    width: 64%;
+    float: right;
+  }
+  .GLlatestStory4verticalItem time {
+    text-transform: uppercase;
+    line-height: 12px;
+    margin: 0 0 10px;
+    font: 11px 'pt_sansbold', sans-serif;
+    letter-spacing: .5px;
+    color: #7C898F;
+  }
+  .GLlatestStory4verticalItem h2 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 5px;
+    width: 64%;
+    float: right;
+  }
+  .GLlatestStory4verticalItem .GLstoryByline {
+    color: #666666;
+    font-family: 'pt_sansbold', sans-serif;
+    margin: 0;
+    margin-top: 0;
+  }
+  .GLlatestStory4verticalItem .GLstoryByline a {
+    text-decoration: none;
+  }
+  /**/
+  .GLlatestStory .GLlatestStory3vertical1 {
+    width: 100%;
+    display: table;
+  }
+  .GLlatestStory3vertical1 .GLsectionLabel {
+    border-bottom: 1px solid #C8C9CA;
+    padding-bottom: 20px;
+  }
+  .GLlatestStory3vertical1 .GLlatestStory3vertical {
+    width: 100%;
+    position: relative;
+    display: block;
+    float: left; 
+  }
+  .GLlatestStory3vertical1 .GLstoryLocation {
+    margin-top: 10px;
+  }
+  .GLlatestStory3vertical .GLlatestStory3vertical1Item {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #C8C9CA;
+  }
+  .GLlatestStory3vertical .GLlatestStory3vertical1Item:last-child {
+    border-bottom: none;
+  }
+  .GLlatestStory3vertical h2 {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 800;
+    margin-top: 5px;
+  }
+  .GLlatestStory3vertical1 .GLlatestStory3vertical1ItemBig {
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+    display: block;
+    float: left;
+  }
+  .GLlatestStory3vertical1 .GLlatestStory3vertical1ItemBig h2 {
+    width: 80%;
+    background-color: #FFFFFF;
+    padding: 2% 2% 0 0;
+    margin-top: -12%;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 800;
+    position: relative;
+    border-top: 7px solid #009388;
+  }
+  /***************/
+  /*media queries*/
+  @media screen and (min-width: 768px) {
+    .GLsection {
+      margin-top: 20px;
+    }
+    .GLlatestStory .GLlatestStoryTop .GLstoryFigure {
+      width: 40%;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: 991px) {
+    .GLlatestStory4verticalItem h2 {
+      font-size: 22px;
+      line-height: 26px;
+    }
+    .GLlatestStory3vertical1 .GLlatestStory3vertical {
+      width: 40%;
+      margin-right: 2%;
+    }
+    .GLlatestStory3vertical1 .GLlatestStory3vertical1ItemBig {
+      width: 58%;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .GLlatestStory .GLlatestStory4vertical {
+      width: 40%;
+      margin-right: 2%;
+    }
+    .GLlatestStory .GLlatestStory3vertical1 {
+      width: 58%;
+    }
+    .GLlatestStory3vertical1 .GLsectionLabel {
+      margin-top: 30px;
+    }
+  }
+  /***************/
+  .GLsection .GL3horizontalStory {
+    width: 100%;
+    position: relative;
+    display: table;
+    border-top: 1px solid #C8C9CA;
+    margin-top: 15px;
+  }
+  .GL3horizontalStory .GLsectionLabel {
+    margin-bottom: 25px;
+  }
+  .GL3horizontalStory .GLsectionLabel span {
+    font-size: 11px;
+    font-weight: normal;
+    margin-left: 5px;
+  }
+  .GL3horizontalStory .GL3horizontalStoryItem {
+    width: 100%;
+    position: relative;
+    display: block;
+    float: left;
+    margin-bottom: 30px;
+  }
+  .GL3horizontalStory .GLstoryLocation {
+    width: 80%;
+    background-color: #FFFFFF;
+    padding: 2% 2% 0% 0%;
+    margin-top: 0;
+    position: relative;
+  }
+  .GL3horizontalStory .GL3horizontalStoryItem time {
+    z-index: 1;
+    position: relative;
+  }
+  .GL3horizontalStory .GL3horizontalStoryItem h2 {
+    width: 80%;
+    background-color: #FFFFFF;
+    padding: 2% 2% 0 0;
+    margin-top: -15%;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 800;
+    position: relative;
+    border-top: 7px solid #009388;
+    min-height:57px;
+    position:relative;
+  }
+  .GL3horizontalStory .GL3horizontalStoryItem.interactiveStoryTelling h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right:0;
+    width: 48px;
+    height: 48px;
+    color: white;
+    background: url(/img/icons/storytelling-icon.png) no-repeat center center #ffffff;
+    background-size: 80%;
+  }
+  /***************/
+  /*media queries*/
+  @media screen and (min-width: 420px) {
+  }
+  @media screen and (min-width: 768px) {
+    .GL3horizontalStory .GL3horizontalStoryItem h2 {
+     margin-top: -8%;
+   }
+  }
+  @media screen and (min-width: 991px) {
+    .GL3horizontalStory .GL3horizontalStoryItem {
+      width: 32%;
+      margin-right: 2%;
+    }
+    .GL3horizontalStory .GL3horizontalStoryItem:last-child {
+      margin-right: 0;
+    }
+    .GL3horizontalStory .GL3horizontalStoryItem h2 {
+     margin-top: -15%;
+   }
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  /***************/
+  .GLsection .GL1vertical2Story {
+    width: 100%;
+    position: relative;
+    display: table;
+    margin-top: 15px;
+  }
+  .GL1vertical2Story .GL1vertical2StoryItemBig {
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+    display: block;
+    float: left;
+  }
+  .GL1vertical2StoryItemBig figure {
+    width: 100%;
+    position: relative;
+    display: block;
+    float: left;
+  }
+  .GL1vertical2StoryItemBig time {
+    width: 100%;
+    position: relative;
+    display: block;
+    float: left;
+    margin-bottom: 5px;
+    margin-top: 7px;
+  }
+  .GL1vertical2StoryItemBig h2 {
+    width: 100%;
+    position: relative;
+    display: block;
+    float: left;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 800;
+    margin-top: 5px;
+  }
+  .GL1vertical2StoryItemBig .GLstorySummary {
+    width: 100%;
+    position: relative;
+    display: block;
+    float: left;
+    margin-top: 0;
+  }
+  .GL1vertical2Story .GL1vertical2StoryItem {
+    width: 48%;
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 2%;
+  }
+  .GL1vertical2StoryItem .GLstoryLocation {
+    margin-top: 10px;
+  }
+  .GL1vertical2StoryItem h2 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 800;
+    margin-top: 20px;
+  }
+  /***************/
+  /*media queries*/
+  @media screen and (min-width: 420px) { 
+  }
+  @media screen and (min-width: 600px) {
+  }
+  @media screen and (min-width: 768px) {
+    .GL1vertical2StoryItem .GLstoryLocation {
+      margin-top: 5px;
+    }
+  }
+  @media screen and (min-width: 991px) {
+    .GL1vertical2Story .GL1vertical2StoryItemBig {
+      width: 65%;
+      margin-right: 2%;
+    }
+    .GL1vertical2StoryItemBig figure {
+      width: 40%;
+      margin-right: 2%;
+    }
+    .GL1vertical2StoryItemBig time {
+      width: 58%;
+    }
+    .GL1vertical2StoryItemBig h2 {
+      width: 58%;
+    }
+    .GL1vertical2StoryItemBig .GLstorySummary {
+      width: 58%;
+    }
+    .GL1vertical2Story .GL1vertical2StoryItem {
+      width: 33%;
+      margin-right: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  /***************/
+  .GLsection .GL1gallery3Story {
+    width: 100%;
+    position: relative;
+    display: table;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  .GL1gallery3Story .GL1gallery3StoryItemBig {
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+    position: relative;
+    display: block;
+    float: left;
+  }
+  .GL1gallery3Story .GL1gallery3StoryItemBig img{
+    height: 250px;
+  }
+  .GL1gallery3StoryItemBig .GLstoryLocation {
+    width: 70%;
+    background-color: #FFFFFF;
+    margin-top: 0;
+    padding: 2% 2% 0% 0%;
+    position: relative;
+  }
+  .GL1gallery3Story .GL1gallery3StoryItemBig time {
+    z-index: 1;
+    position: relative;
+  }
+  .GL1gallery3Story .GL1gallery3StoryItemBig h2 {
+    width: 70%;
+    background-color: #FFFFFF;
+    padding: 2% 2% 0% 0%;
+    margin-top: -12%;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 800;
+    position: relative;
+    border-top: 7px solid #009388;
+  }
+  .GL1gallery3Story .GL1gallery3StoryContainer {
+    width: 100%;
+    padding-left: 4%;
+    padding-bottom: 4%;
+    margin-top: 173px;
+    position: relative;
+    display: block;
+    float: left;
+    background-color: #2A343F;
+  }
+  .GL1gallery3StoryContainer .GLsectionLabel {
+    color: #C8C9CA;
+  }
+  .GL1gallery3Story .GL1gallery3StoryItem  {
+    margin-top: 18px;
+  }
+  .GL1gallery3Story .GL1gallery3StoryItem h2 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 800;
+    margin-top: 0;
+  }
+  .GL1gallery3Story .GL1gallery3StoryItem h2 a {
+    color: #C8C9CA;
+  }
+  .GL1gallery3Story .GL1gallery3StoryItem h2 a:hover {
+    color: #fff;
+  }
+  /***************/
+  /*media queries*/
+  @media screen and (min-width: 420px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 991px) {
+    .GL1gallery3Story .GL1gallery3StoryItemBig {
+      width: 65%;
+      min-height: 350px;
+      max-height: 350px;
+    }
+    .GL1gallery3Story .GL1gallery3StoryItemBig img{
+      height: 350px;
+    }
+    .GL1gallery3Story .GL1gallery3StoryContainer {
+      width: 35%;
+      min-height: 350px;
+      max-height: 350px;
+      padding-left: 2%;
+      padding-bottom: 0;
+      margin-top: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  /***************/
+  .GLsection .GL4horizontalStoryCarouselContainer {
+    width: 100%;
+    display: table;
+    position: relative;
+    margin-top: 50px;
+  }
+  .GL4horizontalStoryCarouselContainer .GL4horizontalStoryCarousel {
+    width: calc(100% + 50px);
+    position: relative;
+    left: -25px;
+    display: table;
+    background-color: #ECAB50;
+  }
+  .GL4horizontalStoryCarousel .GLsectionLabel  {
+    margin-top: 25px;
+    margin-left: 25px;
+    float: none;
+  }
+  .flexsliderGL4horizontalStoryCarousel {
+    margin: 40px 25px 80px;
+  }
+  .GL4horizontalStoryCarousel .GL4horizontalStoryCarouselItem {
+    background-color: #FFFFFF;
+    padding-top: 10px;
+    position: relative;
+  }
+  .GL4horizontalStoryCarousel .GL4horizontalStoryCarouselItem h2 {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 800;
+    margin-top: 0;
+    padding: 0 15px 0;
+    margin-bottom: 0;
+    max-height: 56px;
+    overflow: hidden;
+  }
+  .GL4horizontalStoryCarousel .GL4horizontalStoryCarouselItem time {
+    padding: 0 15px;
+  }
+  .GL4horizontalStoryCarousel .GL4horizontalStoryCarouselItem img {
+    min-height: 180px;
+    max-height: 180px;
+  }
+  .GL4horizontalStoryCarousel .GL4horizontalStoryCarouselItem .GLstoryLocation {
+    margin-bottom: 10px;
+  }
+  /***************/
+  .GLsection .GL1wide3Story {
+    width: 100%;
+    position: relative;
+    display: table;
+    margin-top: 25px;
+  }
+  .GL1wide3Story .GLsectionLabel span {
+    font-size: 11px;
+    font-weight: normal;
+    margin-left: 5px;
+  }
+  .GL1wide3Story .GL1wide3StoryItemBig {
+    position: relative;
+  }
+  .GL1wide3Story .GL1wide3StoryItemBig h2 {
+    font-size: 36px;
+    line-height: 42px;
+    font-family: 'pt_serifbold', serif;
+    font-weight: 500;
+    width: 95%;
+    position: absolute;
+    top: 30%;
+    left: 0px;
+    background-color: transparent;
+    border: 0;
+    padding:0;
+    z-index:30;
+  }
+  .GL1wide3Story .GL1wide3StoryItemBig h2 a {
+    background-color: #fff;
+    padding:0 10px 0 2px;
+    color:#32142B;
+  }
+    .GL1wide3Story .GL1wide3StoryItemBig h2 a:hover {
+    background:#009388;
+    color:#fff;
+   -webkit-transition: 0;
+    -moz-transition: none;
+    -o-transition: 0;
+    -ms-transition: 0;
+    transition:none;
+  }
+    .GL1wide3Story .GL1wide3StoryItemBig.interactiveStoryTelling h2 a:hover {
+    color:#fff;
+   -webkit-transition: 0;
+    -moz-transition: none;
+    -o-transition: 0;
+    -ms-transition: 0;
+    transition:none;
+  }
+  .GL1wide3Story .GL1wide3StoryItemBig figure {
+    width: calc(100% + 50px);
+    position: relative;
+    left: -25px;
+    display: table;
+    margin-top: 30px;
+  }
+  .GL1wide3Story .GL1wide3StoryItemBig.interactiveStoryTelling figure:after {
+    content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 48px;
+      height: 48px;
+      color: white;
+      background: url(/img/icons/storytelling-icon.png) no-repeat center center #ffffff;
+      background-size: 80%;
+  }
+  .GL1wide3Story .GL1wide3StoryContainer {
+    margin: 40px 0;
+  }
+  .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem {
+    width: 100%;
+    display: table;
+    margin: 20px 0 0 0;
+  }
+  .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem figure {
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    overflow: hidden;
+    position: relative;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+  .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem figure img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+  }
+  .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem h2 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 800;
+    margin-top: 0;
+  }
+  .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem h3 {
+    margin-top: 0;
+  }
+  .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem .GLstoryTitle,
+  .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem .GLstorySummary {
+    width: 60%;
+    float: left;
+  }
+  .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem .GLstoryLocation {
+    width: 70%;
+    float: right;
+  }
+  /***************/
+  /*media queries*/
+  @media screen and (min-width: 420px) {
+    .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem .GLstoryLocation,
+    .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem .GLstoryTitle,
+    .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem .GLstorySummary {
+      width: 75%;
+      float:right;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    
+  }
+  @media screen and (min-width: 768px) {
+    .GL1wide3Story .GL1wide3StoryItemBig h2 {
+      font-size:45px;
+      line-height:56px;
+      width: 65%;
+  
+    }
+    
+  }
+  @media screen and (min-width: 991px) {
+    .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem .GLstoryLocation,
+    .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem .GLstoryTitle,
+    .GL1wide3Story .GL1wide3StoryContainer .GL1wide3StoryItem .GLstorySummary {
+      width: 80%;
+      float:left;
+    }
+      .GL1wide3Story .GL1wide3StoryItemBig h2 {
+      font-size:55px;
+      line-height:66px;
+      width: 65%;
+  
+    }
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  /***************/
+  .GLsection .GLwideStorySliderContainer {
+    width: 100%;
+    position: relative;
+    display: table;
+    margin-top: 25px;
+  }
+  .GLwideStorySliderContainer .flexslider{
+    width: calc(100% + 50px);
+    position: relative;
+    left: -25px;
+    display: table;
+  }
+  .GLwideStorySliderContainer .flexslider .slides li {
+      width: calc(12% + 16px)!important;
+  }
+  .GLwideStorySliderContainer .GLwideStorySliderItem {
+    background-color: #0B2B49;
+    padding-bottom: 30px;
+  }
+  .GLwideStorySliderContainer .GLwideStorySliderItem figure {
+    width: 100%;
+    float: left;
+    padding-bottom: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background: #000
+  }
+  .GLwideStorySliderContainer .GLwideStorySliderItem .GLstoryLocation {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    padding: 0 25px;
+  }
+  .GLwideStorySliderContainer .GLwideStorySliderItem h2 {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    padding: 0 25px;
+    font-family: 'pt_serifbold', serif;
+  }
+  .GLwideStorySliderContainer .GLwideStorySliderItem h2 a {
+    color: #FFFFFF;
+  }
+  .GLwideStorySliderContainer .GLwideStorySliderItem h2 a:hover {
+    color: #C8C9CA;
+  }
+  /***************/
+  /*media queries*/
+  @media screen and (min-width: 420px) {
+    .GLwideStorySliderContainer .flexslider .slides li {
+      width: calc(12% + 24px)!important;
+  }
+  }
+  @media screen and (min-width: 768px) {
+    .GLwideStorySliderContainer .flexslider .slides li {
+      width: calc(13% + -32px)!important;
+  }
+  }
+  @media screen and (min-width: 991px) {
+    .GLwideStorySliderContainer .flexslider .slides li {
+      width: calc(13% + -45px)!important;
+    }
+    .GLwideStorySliderContainer .GLwideStorySliderItem {
+      padding-bottom: 0;
+    }
+    .GLwideStorySliderContainer .GLwideStorySliderItem figure {
+      width: 40%;
+      padding-bottom: 40%;
+    }
+    .GLwideStorySliderContainer .GLwideStorySliderItem .GLstoryLocation {
+      width: 58%;
+      float: right;
+    }
+    .GLwideStorySliderContainer .GLwideStorySliderItem h2 {
+      width: 58%;
+      float: right;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  /***************/
+  .GLsection .GL4verticalStory {
+    width: 100%;
+    position: relative;
+    display: block;
+    float: left;
+    padding-top: 25px;
+    padding-right: 5%;
+    margin-bottom: 25px;
+  }
+  .GL4verticalStory .GL4verticalStoryItemBig h2 {
+    font-family: 'pt_serifbold', serif;
+    position:relative;
+  }
+  .GL4verticalStory .GL4verticalStoryItemBig.interactiveStoryTelling h2 :after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    color: white;
+    background: url(/img/icons/storytelling-icon.png) no-repeat center center #ffffff;
+    background-size: 80%;
+  }
+  .GL4verticalStory .GL4verticalStoryItem {
+    margin-top: 20px;
+  }
+  .GL4verticalStory .GL4verticalStoryItem h2 {
+    font-size: 22px;
+    line-height: 26px;
+    font-family: 'pt_serifbold', serif;
+    margin-top: 5px;
+  }
+  /***************/
+  /*media queries*/
+  @media screen and (min-width: 420px) {
+  }
+  @media screen and (min-width: 768px) {
+    .GLsection .GL4verticalStory {
+      width: 60%;
+    }
+  }
+  @media screen and (min-width: 991px) {
+    .GLsection .GL4verticalStory {
+      width: calc(40% - 5px); /*40%*/
+    }
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  /***************/
+  .GLsection .GL3NarrowStoryContainer {
+    width: calc(100% + 50px);
+    position: relative;
+    left: -25px;
+    display: table;
+    background-color: #EAEAEB;
+    padding: 0 20% 25px;
+    float: left;
+  }
+  .GL3NarrowStoryContainer .GL3NarrowStoryItem figure {
+    width: 90px;
+    height: 90px;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+  .GL3NarrowStoryContainer .GL3NarrowStoryItem figure img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+  }
+  .GL3NarrowStoryContainer .GL3NarrowStoryItem h2 {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'pt_serifbold', serif;
+  }
+  /***************/
+  /*media queries*/
+  @media screen and (min-width: 420px) {
+  }
+  @media screen and (min-width: 768px) {
+    .GLsection .GL3NarrowStoryContainer {
+      width: 40%;
+      padding: 0 5% 25px;
+      float: right;
+    }
+  }
+  @media screen and (min-width: 991px) {
+    .GLsection .GL3NarrowStoryContainer {
+      width: 20%;
+      padding: 28px 2% 25px;
+      float: left;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  /***************/
+  .GLsection .GL3vertical1Story {
+    width: 100%;
+    position: relative;
+    display: block;
+    float: left;
+    margin: 25px 0;
+  }
+  .GL3vertical1Story .GL3vertical1StoryItem {
+    margin-bottom: 25px;
+  }
+  .GL3vertical1Story .GL3vertical1StoryItem h2 {
+    font-size: 22px;
+    line-height: 26px;
+    font-family: 'pt_serifbold', serif;
+  }
+  .GL3vertical1Story .GL3vertical1StoryItemBig {
+    margin-top: 25px;
+  }
+  .GL3vertical1Story .GL3vertical1StoryItemBig .GLstoryLocation {
+    width: 70%;
+    background-color: #FFFFFF;
+    padding: 2% 2% 0 0;
+    margin-top: 0;
+    position: relative;
+  }
+  .GL3vertical1Story .GL3vertical1StoryItemBig time {
+    z-index: 1;
+    position: relative;
+  }
+  .GL3vertical1Story .GL3vertical1StoryItemBig h2 {
+    width: 70%;
+    background-color: #FFFFFF;
+    padding: 2% 2% 0 0;
+    margin-top: -12%;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 800;
+    position: relative;
+    border-top: 7px solid #009388;
+  }
+  .GL3vertical1Story .GL3vertical1StoryItemBig figure {
+    
+  }
+  /***************/
+  /*media queries*/
+  @media screen and (min-width: 420px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 991px) {
+    .GLsection .GL3vertical1Story {
+      width: 40%;
+      padding-top: 25px;
+      padding-left: 25px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  /*****************************************************************
+   * Section navigation
+   *****************************************************************/
+  .GLsectionNavigation {
+    position: fixed;
+    z-index: 99;
+  }
+  .GLsectionNavigation .GLsectionPrev, .GLsectionNavigation .GLsectionNext {
+    left: 0;
+    top: 40%;
+    position: fixed;
+    display: block;
+    height: 120px;
+    width: 40px;
+    background-color: #FFFFFF;
+    border: 1px solid #CCC;
+    -webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out;
+    opacity: 0.8;
+  }
+  .GLsectionNavigation .GLsectionNext {
+    left: auto;
+    right: 0;
+  }
+  .GLsectionNavigation .GLsectionPrev:hover, .GLsectionNavigation .GLsectionNext:hover {
+    background-color: #FFFFFF;
+    border: 1px solid #CCC;
+    width: 300px;
+    opacity: 1;
+  }
+  .GLsectionPrev i, .GLsectionNext i {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-left: 9px;
+    color: #262626;
+  }
+  .GLsectionPrev:hover i, .GLsectionNext:hover i {
+    color: #262626;
+    margin-top: -80px;
+  }
+  .GLsectionNext i {
+    float: right;
+    margin-right: 9px;
+  }
+  .GLsectionPrev i {
+    float: left;
+  }
+  .GLsectionPrev span, .GLsectionNext span {
+    display: none;
+  }
+  .GLsectionPrev:hover span, .GLsectionNext:hover span {
+    display: block;
+    float: left;
+    margin: 10px;
+    color: #009388;
+    font-size: 20px;
+    font-family: 'pt_serifbold', serif;
+  }
+  .GLsectionPrev:hover span {
+    float: right;
+  }
+  .pag-Home span, .pag-News span, .pag-Politics span, .pag-Business span,
+  .pag-Foreign span, .pag-Sport span, .pag-Football span, .pag-Basket span,
+  .pag-Tennis span, .pag-Golf span, .pag-Art span, {
+    background-image: none;
+  }
+  .pag-Home .GLsectionPrev:hover span, .pag-Home .GLsectionNext:hover span,
+  .pag-News .GLsectionPrev:hover span, .pag-News .GLsectionNext:hover span,
+  .pag-Politics .GLsectionPrev:hover span, .pag-Politics .GLsectionNext:hover span,
+  .pag-Business .GLsectionPrev:hover span, .pag-Business .GLsectionNext:hover span,
+  .pag-Foreign .GLsectionPrev:hover span, .pag-Foreign .GLsectionNext:hover span,
+  .pag-Sport .GLsectionPrev:hover span, .pag-Sport .GLsectionNext:hover span,
+  .pag-Football .GLsectionPrev:hover span, .pag-Football .GLsectionNext:hover span,
+  .pag-Basket .GLsectionPrev:hover span, .pag-Basket .GLsectionNext:hover span,
+  .pag-Tennis .GLsectionPrev:hover span, .pag-Tennis .GLsectionNext:hover span,
+  .pag-Golf .GLsectionPrev:hover span, .pag-Golf .GLsectionNext:hover span,
+  .pag-Art .GLsectionPrev:hover span, .pag-Art .GLsectionNext:hover span {
+    display: block;
+    text-align: center;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 100px;
+    padding-left: 90px;
+    padding-top: 35px;
+  }
+  .pag-Home .GLsectionPrev:hover span, .pag-Home .GLsectionNext:hover span {
+    background-image: url('/img/section-nav/home.png')!important;
+  }
+  .pag-News .GLsectionPrev:hover span, .pag-News .GLsectionNext:hover span {
+    background-image: url('/img/section-nav/news.png')!important;
+  }
+  .pag-Politics .GLsectionPrev:hover span, .pag-Politics .GLsectionNext:hover span {
+    background-image: url('/img/section-nav/politics.png')!important;
+  }
+  .pag-Business .GLsectionPrev:hover span, .pag-Business .GLsectionNext:hover span {
+    background-image: url('/img/section-nav/business.png')!important;
+  }
+  .pag-Foreign .GLsectionPrev:hover span, .pag-Foreign .GLsectionNext:hover span {
+    background-image: url('/img/section-nav/foreign.png')!important;
+  }
+  .pag-Sport .GLsectionPrev:hover span, .pag-Sport .GLsectionNext:hover span {
+    background-image: url('/img/section-nav/sport.png')!important;
+  }
+  .pag-Football .GLsectionPrev:hover span, .pag-Football .GLsectionNext:hover span {
+    background-image: url('/img/section-nav/football.png')!important;
+  }
+  .pag-Basket .GLsectionPrev:hover span, .pag-Basket .GLsectionNext:hover span {
+    background-image: url('/img/section-nav/basket.png')!important;
+  }
+  .pag-Tennis .GLsectionPrev:hover span, .pag-Tennis .GLsectionNext:hover span {
+    background-image: url('/img/section-nav/tennis.png')!important;
+  }
+  .pag-Golf .GLsectionPrev:hover span, .pag-Golf .GLsectionNext:hover span {
+    background-image: url('/img/section-nav/golf.png')!important;
+  }
+  .pag-Art .GLsectionPrev:hover span, .pag-Art .GLsectionNext:hover span {
+    background-image: url('/img/section-nav/art.png')!important;
+  }
+  .pag-Home .GLsectionPrev:hover span, .pag-News .GLsectionPrev:hover span, .pag-Politics .GLsectionPrev:hover span, .pag-Business .GLsectionPrev:hover span,
+  .pag-Foreign .GLsectionPrev:hover span, .pag-Sport .GLsectionPrev:hover span, .pag-Football .GLsectionPrev:hover span, .pag-Basket .GLsectionPrev:hover span,
+  .pag-Tennis .GLsectionPrev:hover span, .pag-Golf .GLsectionPrev:hover span, .pag-Art .GLsectionPrev:hover span {
+    padding-right: 90px;
+    padding-left: 0;
+    background-position: 180px;
+  }
+  /*****************************************************************
+   * STORY
+   *****************************************************************/
+  
+  .GLcontent {
+    font-family: 'pt_serifregular', serif;
+    color: #454D53;
+  }
+  .GLcontent a {
+    text-decoration: none;
+  }
+  .GLcontent .GLstoryTitle {
+    font-family: 'pt_serifbold', serif;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 800;
+    color: #000000;
+    margin-top: 30px;
+  }
+  .GLcontent .GLstorySummary {
+    font-size: 14px;
+    line-height: 24px;
+    color: #383F43;
+    font-family: 'pt_serifbold', serif;
+    margin-top: 10px;
+  }
+  .GLcontent figure img {
+    width: 100%;
+  }
+  .GLcontent .GLstoryInfo {
+    border-top: 1px solid #C8C9CA;
+    border-bottom: 1px solid #C8C9CA;
+    margin: 40px 0;
+    padding: 10px 0;
+    display: table;
+    width: 100%;
+  }
+  .GLcontent .GLstoryByline {
+    color: #666666;
+    font-family: 'pt_sansbold', sans-serif;
+    margin: 0;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .GLcontent .GLstoryByline a {
+    text-decoration: none;
+  }
+  .GLcontent .GLstoryByline i {
+    font-size:18px;
+    padding:0 5px 0;
+  }
+  .GLcontent .GLstoryByline .GLstoryBylineFaces img {
+    width: 42px;
+    height: 42px;
+    margin: 0 5px;
+  }
+  .GLcontent .GLstoryByline span a i.fa-facebook {
+    margin-left: 5px;
+  }
+  .GLcontent .GLstoryByline span a i.fa-facebook:hover {
+    color: #3B5998;
+  }
+  .GLcontent .GLstoryByline span a i.fa-twitter {
+    margin-left: 5px;
+  }
+  .GLcontent .GLstoryByline span a i.fa-twitter:hover {
+    color: #4099FF;
+  }
+  .GLcontent .GLstoryByline span a i.fa-google-plus {
+    margin-left: 5px;
+  }
+  .GLcontent .GLstoryByline span a i.fa-google-plus:hover {
+    color: #D73D32;
+  }
+  .GLcontent .GLstoryByline span a i.fa-pinterest {
+    margin-left: 5px;
+  }
+  .GLcontent .GLstoryByline span a i.fa-pinterest:hover {
+    color: #CC2127;
+  }
+  /*commment bubble*/
+  .GLstoryCommentBubble {
+    background-color: #2A343F;
+    width: 145px;
+    text-align: left;
+    padding: 10px 15px;
+    margin-right: 15px;
+    position: relative;
+    float: right;
+    color: #FFFFFF;
+    margin: 10px 0;
+    font-weight: 600;
+  }
+  .GLstoryCommentBubble a {
+    color: #FFFFFF;
+  }
+  .GLstoryCommentBubble a:hover {
+    color: #009388;
+  }
+  .GLstoryCommentBubble .arrow {
+    border-style: solid;
+    position: absolute;
+  }
+  .bottom {
+    border-color: transparent transparent transparent transparent;
+    border-width: 8px 8px 0px 8px;
+    bottom: -4px;
+  }
+  .bottom:after {
+    border-color: #2A343F transparent transparent transparent;
+    border-style: solid;
+    border-width: 15px 15px 0px 0px;
+    bottom: -17px;
+    content: "";
+    position: absolute;
+    left: -14px;
+  }
+  .GLcontent .GLstoryLocation {
+    margin: 40px 0;
+  }
+  .GLcontent time {
+    text-transform: uppercase;
+    line-height: 12px;
+    font: 11px 'pt_sansbold', sans-serif;
+    letter-spacing: .5px;
+    color: #909090;
+  }
+  .GLcontent time:before {
+    content: "\f124";
+    font-family: 'FontAwesome';
+    font-size: 15px;
+    color: #364043;
+    margin: 0 5px 0 10px;
+  }
+  .GLcontent .GLtext p {
+    font-size: 16px;
+    margin-bottom: 1em;
+  }
+  .GLcontent .GLtext p:first-child {
+    margin-top: 20px;
+  }
+  .GLcontent .GLtext p:first-child:first-letter {
+    color: #2A343F;
+    font-size: 70px;
+    font-family: 'pt_serifbold', serif;
+    float: left;
+    margin: 11px 9px 5px 0;
+  }
+  .GLcontent h5 {
+    font-family: 'pt_serifbold', serif;
+    font-size: 18px;
+    color: #364043;
+    margin: 25px 0 15px;
+  }
+  /*****************************************************************
+   * STORY - Related
+   *****************************************************************/
+  .GLcontent .GLstoryRelated {
+    position: relative;
+    width: 260px;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #00937D;
+  }
+  .GLcontent .GLstoryRelated:before {
+    display: block;
+    color: #000;
+    width: 100%;
+    font-family: 'pt_serifregular',serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+  .GLcontent .GLstoryRelatedLabel {
+    display: block;
+    font-size: 15px;
+    line-height: 16px;
+    color: #ccc;
+    text-transform: uppercase;
+    padding: 10px 20px 0;
+    font-weight:bold;
+  }
+  .GLcontent .GLstoryRelated h4 {
+    padding: 0px 20px 10px;
+    color: #FFFFFF;
+    font-family: 'pt_serifbold',serif;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  /*****************************************************************
+   * STORY - Correlated
+   *****************************************************************/
+  .GLcontent .GLstoryCorrelated {
+    position: relative;
+    width: 260px;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #FFFFFF;
+  }
+  .GLcontent .GLstoryCorrelatedLabel {
+    display: block;
+    font-size: 15px;
+    line-height: 16px;
+    font-weight:bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: #00937D;
+  }
+  .GLcontent .GLstoryCorrelated a {
+    display: block;
+    border-bottom: 1px solid #C8C9CA;
+  }
+  .GLcontent .GLstoryCorrelated a:last-child {
+    border-bottom: none;
+  }
+  .GLcontent .GLstoryCorrelated a:hover {
+    color: #00937D;
+  }
+  .GLcontent .GLstoryCorrelated h4 {
+    padding: 5px 20px 0px;
+    font-family: 'pt_serifregular',serif;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+  }
+  .GLcontent .GLstoryCorrelatedViews {
+    color: #454D53;
+    font-size: 14px;
+    padding: 0 20px;
+  }
+  .GLcontent .GLstoryCorrelatedViews:before {
+    font-family: "fontAwesome";
+    content: "\f06e  ";
+  }
+  .GLcontent .GLstoryCorrelatedViews:after {
+    content: " Views";
+  }
+  /*****************************************************************
+   * STORY - Poll
+   *****************************************************************/
+  .GLcontent .GLpoll {
+    position: relative;
+    width: 260px;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #FFFFFF;
+  }
+  .GLcontent .GLpoll .GLpollLabel {
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight:bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: #00937D;
+  }
+  .GLpoll .GLpollOption {
+    padding: 20px 0 20px 20px;
+    line-height: 22px;
+  }
+  .GLpoll .GLpollOption .radio {
+    padding-left: 20px;
+  }
+  .GLpoll .GLpollOption .radio label {
+    display: inline-block;
+    position: relative;
+    padding-left: 5px;
+  }
+  .GLpoll .GLpollOption .radio label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out;
+  }
+  .GLpoll .GLpollOption .radio label::after {
+    display: inline-block;
+    position: absolute;
+    content: " ";
+    width: 11px;
+    height: 11px;
+    left: 3px;
+    top: 3px;
+    margin-left: -20px;
+    border-radius: 50%;
+    background-color: #555555;
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  }
+  .GLpoll .GLpollOption .radio input[type="radio"] {
+    opacity: 0;
+  }
+  .GLpoll .GLpollOption .radio input[type="radio"]:checked + label::after {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  .GLpoll .GLpollOption .radio input[type="radio"]:disabled + label {
+    opacity: 0.65;
+  }
+  .GLpoll .GLpollOption .radio input[type="radio"]:disabled + label::before {
+    cursor: not-allowed;
+  }
+  .GLpoll .GLpollOption .radio input[type="radio"] + label::after {
+    background-color: #00937D;
+  }
+  .GLpoll .GLpollOption .radio input[type="radio"]:checked + label::before {
+    border-color: #00937D;
+  }
+  .GLpoll .GLpollOption .radio input[type="radio"]:checked + label::after {
+    background-color: #00937D;
+  }
+  .GLpoll .GLpollSubmit {
+    padding: 0 0 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #C8C9CA;
+  }
+  .GLpoll .GLpollSubmit .btn-default {
+    font-weight:bold; 
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background: #009388;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border-color: transparent;
+  }
+  .GLpoll .GLpollSubmit .btn-default:hover {
+    color: #FFFFFF;
+    background: #408887;
+  }
+  
+  /*****************************************************************
+   * STORY - Video
+   *****************************************************************/
+  .GLcontent .GLstoryVideo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .GLcontent .GLstoryVideo iframe, .GLcontent .GLstoryVideo embed {
+    width: 100%;
+    height: auto;
+    max-height: 315px;
+  }
+  .GLcontent .GLstoryVideo h4 {
+    width: 100%;
+    background-color: #2A343F;
+    color: #ccc;
+    font-family: 'pt_serifbold',serif;
+    font-size: 14px;
+    line-height: 18px;
+    height: 70px;
+    margin: 0;
+    padding: 15px 20px;
+    margin-top: -5px;
+    max-height: 70px;
+    overflow: hidden;
+  }
+  @media screen and (min-width: 420px) {
+    .GLcontent p {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 992px) {
+    .GLcontent {
+      margin-top: 30px;
+      width: 70%;
+      position: relative;
+      float: left;
+    }
+    .GLcontent p {
+      font-size: 18px;
+      line-height: 27px;
+    }
+    .GLcontent .GLstoryTitle {
+      font-size: 40px;
+      line-height: 44px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .GLcontent .GLstorySummary {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .GLcontent .GLstoryVideo {
+      width: 60%;
+    }
+  }
+  @media screen and (min-width: 1060px) {
+    .GLcontent .GLstoryRelated {
+      width: 250px;
+    }
+    .GLcontent .GLstoryVideo {
+      width: 100%;
+    }
+    .GLcontent .GLstoryFigure{
+      margin:34px 0;
+      width:100%;
+      }
+  }
+  /*****************************************************************
+   * STORY - Credits
+   *****************************************************************/
+  .GLcontent .GLstoryCredit {
+    font: 12px 'pt_sansregular',Sans-serif;
+    display: block;
+    color: #999;
+    clear: left;
+    margin-bottom: 30px;
+  }
+  
+  /*****************************************************************
+   * STORY - Media info
+   *****************************************************************/
+  .GLstoryMediaInfo {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    color: #FFFFFF;
+    font-family: pt_sansbold, sans-serif;
+  }
+  .GLstoryMediaInfo i {
+    color: #FFFFFF;
+  }
+  /*****************************************************************
+   * STORY -  Animate caption
+   *****************************************************************/
+  
+  .GLstoryImageCaption{ 
+    display:none; 
+  }
+  
+  
+  /*****************************************************************
+   * STORY - Comments
+   *****************************************************************/
+  .GLstoryComments  h5 {
+    font-family: 'pt_serifregular', serif;
+  }
+  .GLstoryComments .GLreply {
+    margin-left: 75px;
+  }
+  .GLstoryComments .GLuserComment {
+    border-bottom: 1px solid #ddd;
+    margin-top: 40px;
+  }
+  .GLstoryComments .GLuserComment img {
+    width: 60px;
+    height: 60px;
+    border-radius: 999px;
+    vertical-align: top;
+  }
+  .GLstoryComments .GLuserInfo {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .GLstoryComments .GLuserInfo h3 {
+    margin: 0px;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  .GLstoryComments .GLuserInfo p {
+    font-size: 13px;
+    color: #666;
+  }
+  .GLbtn {
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 0 1.25em;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding-top: 0.75em;
+    padding-right: 1.5em;
+    padding-bottom: 0.8125em;
+    padding-left: 1.5em;
+    font-size: 1em;
+    background-color: #009388;
+    border: 1px solid #009388;
+    color: #FFFFFF;
+  }
+  a.GLbtn:hover {
+    color: #454D52;
+  }
+  a.GLbtn:hover {
+    background-color: #FFFFFF;
+    color: #009388;
+    border: 1px solid #009388;
+  }
+  .GLstoryComments .GLleaveComment {
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+  .GLstoryComments .GLleaveComment .GLreplyForm {
+    margin-top: 40px;
+  }
+  .GLleaveComment .GLreplyForm .GLinputComment {
+    position: relative;
+    width: 100%;
+  }
+  .GLleaveComment .GLreplyForm input[type="text"], .GLleaveComment .GLreplyForm textarea {
+    background-color: white;
+    font-family: inherit;
+    border: 1px solid #C8C9CA;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-size: 0.875em;
+    margin: 0 0 1em 0;
+    padding: 0.5em;
+    height: 2.3125em;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+    -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+    transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+  }
+  .GLleaveComment .GLreplyForm input[type="text"] {
+    height: 45px;
+    box-shadow: none;
+  }
+  .GLleaveComment .GLreplyForm textarea {
+    height: 100px;
+    resize: none;
+    box-shadow: none;
+  }
+  /*overwrite default bootstrap .panel styles*/
+  .GLcontent .panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .GLcontent .panel {
+    border-radius: 0;
+    border: none;
+  }
+  .GLcontent .panel-default {
+    border: none;
+  }
+  /*****************************************************************
+   * RSS FEED
+   *****************************************************************/
+  .GLcontent.GLrssfeed .GLtitle {
+    font-family: 'pt_serifbold', serif;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 800;
+    color: #000000;
+    margin-top: 30px;
+  }
+  .GLcontent .GLrssfeedItem {
+    margin: 30px 0;
+  }
+  .GLcontent .GLrssfeedItem ul {
+    margin-left: 0;
+    padding-left: 25px;
+    list-style-position: outside;
+    list-style-image: url('/img/icons/icon-rss.png');
+  }
+  .GLcontent .GLrssfeedItem li {
+    margin-bottom: 10px;
+  }
+  .GLcontent .GLrssfeedItem li a {
+    font-size: 16px;
+    line-height: 26px;
+    color: #454D53;
+    margin-bottom: 20px;
+  }
+  .GLcontent .GLrssfeedItem li a:hover {
+    color: #009388;
+  }
+  .GLcontent .GLrssfeedItem li a span {
+    font-size: 14px;
+  }
+  .GLcontent .GLrssfeedLabel {
+    border-bottom: 1px solid #C8C9CA;
+    font-family: 'pt_serifbold', serif;
+    font-weight: 800;
+    font-size: 18px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  @media screen and (min-width: 768px) {
+    .GLcontent.GLrssfeed .GLtitle {
+      font-size: 40px;
+      line-height: 44px;
+      margin-bottom: 55px;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .GLcontent.GLrssfeed .GLtitle {
+      margin-bottom: 60px;
+    }
+    .GLcontent .GLrssfeedItem li a {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    .GLcontent .GLrssfeedItem li a span {
+      font-size: 14px;
+    }
+  }
+  /*****************************************************************
+   * CITY NEWS
+   *****************************************************************/
+  .GLcontent.GLcityNews .GLtitle {
+    font-family: 'pt_serifbold', serif;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 800;
+    color: #000000;
+    text-transform:capitalize;
+  }
+  .GLcontent.GLcityNews .GLcityNewsTitleInfo {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  .GLcontent.GLcityNews time p {
+    color: #939799;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'pt_sansregular', sans-serif;
+  }
+  .GLcontent.GLcityNews time:before {
+    content: none;
+  }
+  /* city news tab */
+  .GLcontent.GLcityNews .GLcityNewsMapTab {
+    min-height: 450px;
+  }
+  .GLcontent.GLcityNews .tabs li {
+    width: 40%;
+  }
+  .GLcityNewsMapTab .tab-content{
+    top: 30px;
+    bottom: 30px;
+    height: 460px;
+  }
+  /* /city news tab */
+  .GLcontent .GLcityNewsMap {
+    margin-left: -25px;
+    width: calc(100% + 25px);
+    margin-bottom: 20px;
+  }
+  .GLcontent .GLcityNewsMap iframe {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    min-height: 400px;
+  }
+  .GLcontent.GLwide.GLcityNews .GLsectionLabel {
+    text-transform: uppercase;
+    font-family: 'pt_serifbold', serif;
+    font-weight: 800;
+    font-size: 18px;
+    margin: 25px 0 10px;
+  }
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStoryTop {
+    margin-bottom: 90px;
+    padding-bottom: 75px;
+    border-bottom: 1px solid #C8C9CA;
+  }
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStory {
+    margin-bottom: 40px;
+  }
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStoryTop .GLstoryFigure,
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStory .GLstoryFigure,
+  .GLcontent.GLwide.GLcityNews .GL3horizontalStoryItem .GLstoryFigure {
+    margin-top: 0;
+    margin-left: 0; 
+    width: 100%; 
+  }
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStoryTop .GLstoryLocation,
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStory .GLstoryLocation {
+    margin: 20px 0 10px;
+  }
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStoryTop .GLstoryTitle,
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStory .GLstoryTitle {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-top: 10px;
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-family: 'pt_serifbold', serif;
+  }
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStory .GLstoryTitle {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStoryTop .GLstoryByline,
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStory .GLstoryByline {
+    color: #666666;
+    font-family: 'pt_sansbold', sans-serif;
+    margin: 0;
+    margin-top: 0;
+    float:none;
+  }
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStoryTop .GLstorySummary,
+  .GLcontent.GLwide.GLcityNews .GLcityNewsStory .GLstorySummary {
+    font-family: 'pt_serifregular', serif;
+    color: #454D53;
+  }
+  .GLcontent.GLwide.GLcityNews .GL3horizontalStory {
+    margin-top: 90px;
+    padding-top: 30px;
+    border-top: 1px solid #C8C9CA;
+    float:left;
+  }
+  .GLcontent.GLwide.GLcityNews .GL3horizontalStory .GLsectionLabel {
+    margin: 10px 0 25px;
+  }
+  .GLcontent.GLwide.GLcityNews .GL3horizontalStory .GLstoryLocation {
+    width: 80%;
+    background-color: #FFFFFF;
+    padding: 0 2% 0% 0;
+    margin-top: 0;
+    margin-top:-2%;
+    position: relative;
+  }
+  .GLcontent.GLwide.GLcityNews .GL3horizontalStory .GLstoryLocation time {
+    line-height: 12px;
+    font-size: 11px;
+  }
+  .GLcontent.GLwide.GLcityNews .GL3horizontalStory .GL3horizontalStoryItem h2 {
+    width: 80%;
+    background-color: #FFFFFF;
+    padding: 2% 2% 0 0;
+    margin-top: -28%;
+    margin-left: 0;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 800;
+    position: relative;
+  }
+  @media screen and (min-width: 550px) {
+    .GLcontent.GLcityNews .tabs li {
+      width: 35%;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .GLcontent.GLcityNews .GLtitle {
+      font-size: 40px;
+      line-height: 44px;
+    }
+    .GLcontent.GLcityNews .GLcityNewsTitleInfo {
+      margin-bottom: 60px;
+    }
+    .GLcontent.GLcityNews .tabs li {
+      width: 20%;
+    }
+    .GLcontent .GLcityNewsMap {
+      margin-bottom: 70px;
+    }
+    .GLcontent.GLwide.GLcityNews .GLcityNewsStory {
+      margin-bottom: 80px;
+    }
+    .GLcontent.GLwide.GLcityNews .GLcityNewsStoryTop .GLstoryLocation,
+    .GLcontent.GLwide.GLcityNews .GLcityNewsStory .GLstoryLocation {
+      margin: 0 0 10px;
+    }
+    .GLcontent.GLwide.GLcityNews .GL3horizontalStory .GL3horizontalStoryItem h2 {
+      padding-bottom: 6%;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .GLcontent.GLcityNews .GLtitle {
+      margin-top: 0;
+      width: 70%;
+      background-color: #FFFFFF;
+      padding: 2% 2% 0 25px;
+      margin-left: -25px;
+      font-weight: 800;
+      position: relative;
+    }
+    .GLcontent.GLwide.GLcityNews .GL3horizontalStory .GL3horizontalStoryItem h2 {
+      padding-bottom: 0;
+    }
+  }
+  /*****************************************************************
+   * SEARCH PAGE
+   *****************************************************************/
+  .GLsearchPage .GLsearchBox {
+    height: 40px;
+    margin-top: 20px;
+  }
+  #GLsearchWide input[type="text"] {
+    background: url(/img/icons/icon-search-grey.png) no-repeat 99% 9px #FFFFFF;
+    width: 100%;
+    position: relative;
+    color: #B8B8B9;
+    font-size: 13px;
+    padding-left: 10px;
+    font-weight: 700;
+    line-height: 36px;
+    border: 1px solid #B8B8B9;
+    outline: none;
+    display: block;
+  }
+  #GLsearchWide input[type="text"]::-webkit-input-placeholder { /* WebKit browsers */
+    color: #B8B8B9;
+  }
+  #GLsearchWide input[type="text"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #B8B8B9;
+    opacity: 1;
+  }
+  #GLsearchWide input[type="text"]::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #B8B8B9;
+    opacity: 1;
+  }
+  #GLsearchWide input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #B8B8B9;
+  }
+  /* search tab */
+  .GLsearchPage .GLsearchTab {
+    margin-top: 20px;
+    width: 100%;
+    display: table;
+  }
+  .GLsearchPage .GLsearchTab .tabs li {
+    width: 20%;
+  }
+  .GLsearchPage .GLsearchTab .tabs label{
+      font-size: 10px;
+    }
+  /* /search tab */
+  .GLsearchPage .GLsearchTab .tab-content {
+    z-index: 2;
+    display: none;
+    text-align: left;
+    width: calc(100% + 50px);
+    background: transparent;
+    position: absolute;
+    left: -25px;
+    box-sizing: border-box;
+    -webkit-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    background: #FFFFFF;
+    padding: 0 25px;
+  }
+  .GLsearchPage h3.GLsearchResultText {
+    font-family: 'pt_serifbold',serif;
+    line-height: 34px;
+    color: #000000;
+    margin: 60px 0;
+  }
+  .GLsearchPage h3.GLsearchResultText span {
+    color: #9C9994;
+  } 
+  .GLsearchPage .GLsearchStory {
+    margin: 30px 0;
+    position:relative;
+  }
+  .GLsearchPage .GLsearchStory .GLstoryLocation {
+    margin: 0 0 10px;
+  }
+  .GLsearchPage .GLsearchStory .GLstoryTitle {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-top: 10px;
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  .GLsearchPage .GLsearchStory .GLstoryByline {
+    color: #666666;
+    font-family: 'pt_sansbold', sans-serif;
+    margin: 0;
+    margin-top: 10px;
+    float: none;
+    font-size: 14px;
+  }
+  .GLsearchPage .GLsearchStory .GLstorySummary {
+    font-family: 'pt_serifregular', serif;
+    color: #454D53;
+    height:40px;
+    overflow:hidden;
+  }
+  .GLsearchStory .fa {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #009388;
+    font-size: 18px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 45px;
+  }
+  
+  /* /pagination */
+  .GLsearchPage .row.GLpagination {
+    margin: 90px 0 0 0;
+    padding-top: 75px;
+    border-top: 1px solid #C8C9CA;
+  }
+  .GLsearchPage .GLpaginate {
+    display: block;
+    width: 100%;
+    padding-bottom: 100px;
+  }
+  .GLsearchPage .GLpaginate ul {
+    padding-bottom: 30px;
+  } 
+  .GLsearchPage .GLpaginate li {
+    font-weight: bold;
+    width: auto!important;
+    float: left;
+    border-right: none;
+    display: inline;
+  } 
+  .GLsearchPage .GLpaginate li a {
+    width: 38px!important;
+    height: 38px;
+    line-height: 38px;
+    display: block;
+    float: left;
+    color: #454F53;
+    background: #FFFFFF;
+    text-decoration: none;
+    margin-right: 11px;
+    border-radius: 4px;
+    border: solid 1px #C8C9CA;
+    text-align: center;
+  }
+  .GLsearchPage .GLpaginate li a:hover {
+    background: #EEEEEE;
+    color: #555555;
+  }
+  .GLsearchPage .GLpaginate li a:active {
+    -webkit-box-shadow: inset -1px 2px 5px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset -1px 2px 5px rgba(0,0,0,0.25);
+    box-shadow: inset -1px 2px 5px rgba(0,0,0,0.25);
+  }
+  .GLsearchPage .GLpaginate li.GLpaginateCurrent {
+    width: 38px!important;
+    height: 38px;
+    line-height: 38px;
+    display: block;
+    float: left;
+    background-color: #D6D4D2;
+    margin-right: 11px;
+    border-radius: 4px;
+    color: #454D53;
+    text-align: center;
+  }
+  /* /pagination */
+  
+  @media screen and (min-width: 420px) {
+    .GLsearchPage .GLsearchTab .tabs label{
+      font-size: 12px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    #GLmain.GLsearchMain .GLheadTitle {
+      /*width: 100%;*/
+      background-repeat: no-repeat;
+    }
+    .GLsearchPage .GLsearchBox {
+      margin-top: 60px;
+    }
+    .GLsearchPage .GLSearchStory .GLstoryLocation {
+      margin: 0 0 10px;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .GLsearchPage .GLcontentInside {
+      width: 70%;
+    }
+  }
+  /*****************************************************************
+   * UPLOAD CORNER
+   *****************************************************************/
+  .GLcontent.GLuploadCorner .GLtitle {
+    font-family: 'pt_serifbold', serif;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 800;
+    color: #000000;
+  }
+  .GLcontent.GLuploadCorner .GLtitleSub {
+    font-family: 'pt_sansregular', sans-serif;
+    color: #939799;  
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  .GLcontent.GLuploadCorner .GLuploadCornerTop .GLstoryFigure {
+    margin-bottom: 70px;
+  }
+  .GLcontent.GLuploadCorner .GLuploadCornerItem {
+    margin-bottom: 60px;
+  }
+  .GLcontent.GLuploadCorner time:before {
+    content: none;
+  }
+  .GLcontent.GLuploadCorner h2.GLstoryTitle {
+    font-family: 'pt_serifbold', serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 800;
+    color: #000000;
+    margin-top: 5px;
+    width: 100%!important;
+    padding: 2% 0 0 0!important;
+    margin-bottom: 0;
+  }
+  .GLcontent.GLuploadCorner .GLstoryByline {
+    font-size: 13px;
+    margin-top: 0;
+  }
+  .GLcontent.GLuploadCorner .GLuploadCornerItem img {
+    width: 100%;
+    -webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out; 
+  }
+  .GLcontent.GLuploadCorner .GLuploadCornerItem .GLstoryFigureOverlay {
+    background: rgba(194,14,56,0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #FFFFFF;
+    z-index: 100;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity: 0;  
+    width: 100%;  
+    height: 100%;  
+    padding: 20% 0;
+  }
+  .GLstoryFigureOverlay .GLoverlayDate {
+    font-size: 13px;
+    text-align: center;
+  }
+  .GLstoryFigureOverlay .GLoverlayTitle {
+    font-size: 18px;
+    font-family: 'pt_serifbold', serif;
+    text-align: center;
+  }
+  .GLstoryFigureOverlay .GLoverlayCategory {
+    font-size: 14px;
+    text-align: center;
+  }
+  .GLcontent.GLuploadCorner .GLuploadCornerItem .GLstoryFigure:hover .GLstoryFigureOverlay {
+    opacity: 1;
+  }
+  .GLcontent.GLuploadCorner .GLuploadCornerItem .GLstoryFigureOverlay p {
+    -webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+  }
+  .GLcontent.GLuploadCorner .GLuploadCornerItem .GLstoryFigureOverlay .GLoverlayStat {
+    margin: 15px auto 0;
+    width: 100%;
+    text-align: center;
+  }
+  .GLcontent.GLuploadCorner .GLuploadCornerItem .GLstoryFigureOverlay .GLoverlayStatItem {
+    display: inline;
+    margin-right: 5px;
+  }
+  .GLcontent.GLuploadCorner .GLuploadCornerItem .GLstoryFigureOverlay .GLoverlayStatItem:last-child {
+    margin-right: 0;
+  }
+  @media screen and (min-width: 550px) {
+    .GLcontent.GLuploadCorner .GLuploadCornerItem .GLstoryFigureOverlay {
+      padding: 25% 0;
+    }
+    .GLstoryFigureOverlay .GLoverlayDate {
+      font-size: 17px;
+    }
+    .GLstoryFigureOverlay .GLoverlayTitle {
+      font-size: 22px;
+    }
+    .GLstoryFigureOverlay .GLoverlayCategory {
+      font-size: 18px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .GLcontent.GLuploadCorner .GLtitle {
+      font-size: 40px;
+      line-height: 44px;
+    }
+    .GLcontent.GLuploadCorner .GLtitleSub {
+      margin-bottom: 30px;
+    }
+    .GLcontent.GLuploadCorner .GLuploadCornerItem .GLstoryFigureOverlay {
+      padding: 3% 0;
+    }
+    .GLstoryFigureOverlay .GLoverlayDate {
+      font-size: 13px;
+    }
+    .GLstoryFigureOverlay .GLoverlayTitle {
+      font-size: 18px;
+    }
+    .GLstoryFigureOverlay .GLoverlayCategory {
+      font-size: 14px;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .GLcontent.GLuploadCorner .GLtitle {
+      margin-top: 0;
+      width: 70%;
+      background-color: #FFFFFF;
+      padding: 2% 2% 0 25px;
+      margin-left: -25px;
+      font-weight: 800;
+      position: relative;
+    }
+    .GLcontent.GLuploadCorner .GLuploadCornerTop .GLstoryFigure {
+      max-height: 430px;
+    }
+    .GLcontent.GLuploadCorner .GLstoryFigure {
+      width: 100%;
+      margin: 0;
+    }
+    .GLcontent.GLuploadCorner .GLuploadCornerItem .GLstoryFigureOverlay {
+      padding: 2% 0;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .GLcontent.GLuploadCorner .GLuploadCornerItem .GLstoryFigureOverlay {
+      padding: 5% 0;
+    }
+  }
+  
+  /* Isotope Upload
+  ------------------------------- */
+  .GLuploadCornerItem img {
+    max-width: 100%;
+  }
+  /* Isotope Transitions
+  ------------------------------- */
+  .isotope,
+  .isotope .item {
+    -webkit-transition-duration: 0.8s;
+       -moz-transition-duration: 0.8s;
+        -ms-transition-duration: 0.8s;
+         -o-transition-duration: 0.8s;
+            transition-duration: 0.8s;
+  }
+  
+  .isotope {
+    -webkit-transition-property: height, width;
+       -moz-transition-property: height, width;
+        -ms-transition-property: height, width;
+         -o-transition-property: height, width;
+            transition-property: height, width;
+  }
+  
+  .isotope .item {
+    -webkit-transition-property: -webkit-transform, opacity;
+       -moz-transition-property:    -moz-transform, opacity;
+        -ms-transition-property:     -ms-transform, opacity;
+         -o-transition-property:         top, left, opacity;
+            transition-property:         transform, opacity;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .isotope .item {
+      position: static ! important;
+      -webkit-transform: translate(0px, 0px) ! important;
+         -moz-transform: translate(0px, 0px) ! important;
+              transform: translate(0px, 0px) ! important;
+    }
+  }
+  
+  /*****************************************************************
+   * MY HOMEPAGE
+   *****************************************************************/
+  #GLmyHomepageWrapper .row {
+    border-top: 1px solid #C8C9CA;
+    margin-top: 80px;
+    padding-top: 15px;
+  }
+  .GLcustomize a {
+    font-family: 'pt_sansbold', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    float: right;
+    text-align: right;
+    margin-right: 15px;
+    width: 100%;
+  }
+  .GLcustomize a:before {
+   font-family: 'FontAwesome';
+    content: "\f085";
+    margin-right: 5px;
+  }
+  .GLmyHomepageItem .GLmoveIcon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-image: url('/img/icons/icon-move.svg'); 
+  }
+  .GLmyHomepageItemBig {
+    border-bottom: 1px solid #C8C9CA;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+  .GLmyHomepageItemBig .GLstoryLocation {
+    margin-top: 10px;
+  }
+  .GLmyHomepageItemBig h2 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .GLmyHomepageItemSmall {
+    margin-top: 10px;
+    display: table;
+  }
+  .GLmyHomepageItemSmall .GLstoryFigure {
+    width: 33%;
+    float: left;
+    position: relative;
+    margin-right: 1%;
+    margin-top: 5px;
+    height: 100%;
+  }
+  .GLmyHomepageItemSmall .GLstoryLocation {
+    width: 64%;
+    float: right;
+  }
+  .GLmyHomepageItemSmall h2 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 5px;
+    width: 64%;
+    float: right;
+  }
+  .GLmyHomepageItemEmpty {
+    width: 100%;
+    height: 530px;
+    background-color: transparent;
+  }
+  /* Prevent the contents of draggable elements from being selectable. */
+  [draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+  }
+  .GLmyHomepageItem {
+    height: auto;
+    width: 100%;
+    cursor: move;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .GLmyHomepageItem {
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    -moz-transition: -moz-transform 0.2s ease-out;
+    -o-transition: -o-transform 0.2s ease-out;
+    -ms-transition: -ms-transform 0.2s ease-out;
+  }
+  .GLmyHomepageItem.over {
+    border: 3px dashed #E2E0DF;
+    background-color: #EEF5F4;
+  }
+  .GLmyHomepageItem.moving {
+    opacity: 0.4;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+  }
+  /*****************************************************************
+   * TOPIC PAGE
+   *****************************************************************/
+  .GLsection.GLtopicPage .GLtopicIntro {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .GLsection.GLtopicPage .GLtopicIntro h2 {
+    margin-bottom: 20px;
+  }
+  .GLsection.GLtopicPage .GLtopicIntro p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  
+  @media screen and (min-width: 992px) {
+  }
+  /*social*/
+  @media screen and (min-width: 992px) {
+    .GLtopicPage .GLasideSocial {
+      margin-top: 50px;
+      top: 0;
+    }
+  }
+  /************/
+  /* timeline */
+  /************/
+  .closed {
+    display: none;
+  }
+  .GLtopicTimeline .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .GLtimelineSep {
+    height: 1px;
+    background: #9EAEB7;
+    transform: scaleY(0.3);
+    -webkit-transform: scaleY(0.3);
+    position: relative;
+    display: block;
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+  }
+  #GLtopicTimelineArchive {
+    margin: 35px 0 0;
+    display: inline;
+    float: left;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  #GLtopicTimelineArchive .GLtopicTimelineList {
+    padding-bottom: 50px;
+  }
+  #GLtopicTimelineArchive .GLtopicTimelineTitle {
+    margin-left: 0;
+    padding: 0 20px;
+  }
+  #GLtopicTimelineArchive .GLtopicTimelineTitle h2 {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 15px;
+    border-bottom: 1px solid #C8C9CA;
+    padding-bottom: 12px;
+  }
+  #GLtopicTimelineArchive .GLtopicTimelineTitle .GLtopicMoreBtn {
+    cursor: pointer;
+    clear: both;
+    padding: 0;
+    text-transform: uppercase;
+    color: #009388;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+  .GLtopicTimelineList > div:first-child > .GLtopicMoreBtn,
+  .GLtopicTimelineList > div:nth-child(n+3) > .GLtopicMoreBtn {
+    display: none;
+  }
+  #GLtopicTimelineArchive .GLtopicTimelineTitle .GLtopicList {
+    cursor: pointer;
+    opacity: 1;
+    clear: both;
+    padding: 0 15px;
+  }
+  #GLtopicTimelineArchive .GLtopicTimelineTitle .GLtopicList a {
+    text-decoration: none;
+    color: #000;
+    margin-top: 20px;
+    display: inline-block;
+    position: relative;
+    clear: both;
+  }
+  #GLtopicTimelineArchive .GLtopicTimelineTitle .GLtopicList a:first-child {
+    margin-top: 20px;
+  }
+  #GLtopicTimelineArchive .GLtopicTimelineTitle .GLtopicList a:last-child {
+    margin-bottom: 20px;
+  }
+  #GLtopicTimelineArchive .GLtopicTimelineTitle .GLtopicList a::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    top: 26%;
+    left: -24px;
+    position: absolute;
+    background-color: #009388;
+  }
+  .GLtopicTimelineItem h3 {
+    color: #3A4146;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 26px;
+    margin-top: 7px;
+    width: 90%;
+  }
+  .GLtopicTimelineItem h3 a{
+    font-family: 'pt_sansregular', sans-serif;
+    font-size: 14px;
+  }
+  /*******************/
+  /* topic read more */
+  /*******************/
+  #GLTopicReadMore {
+    margin: 50px 0;
+    min-height: 350px;
+  }
+  .GLreadMoreLabel {
+      border-bottom: 1px solid #C8C9CA;
+      font-family: 'pt_serifbold', serif;
+      font-weight: 800;
+      font-size: 18px;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+  }
+  #GLTopicReadMore .tabs li {
+    width: 33.333%
+  }
+  #GLTopicReadMore .GLtab p {
+    text-align: left;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+    z-index: 100;
+    color: #383F43;
+    border-bottom: 1px solid #C8C9CA;
+  }
+  .GLtab a {
+    color: #383F43;
+  }
+  
+  /*topic GALLERY*/
+  #GLtopicGallery {
+    margin: 50px 0;
+    min-height: 350px;
+    background-color: #383F43;
+  }
+  #GLtopicGallery .GLtopicGalleryLabel {
+    font-family: 'pt_serifbold', serif;
+    font-weight: 800;
+    font-size: 18px;
+    padding-bottom: 15px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  #GLtopicGallery .GLtopicGalleryItem {
+    margin: 20px auto;
+  }
+  
+  /*****************************/
+  /* GLtopicGallery flexslider */
+  /*****************************/
+  #GLtopicGallery .flexslider {
+    border-radius: 0;
+    padding-top: 35px;
+    background-color: #383F43;  
+  }
+  #GLtopicGallery .flexslider .slides li {
+    background-color: #383F43;
+  }
+  #GLtopicGallery .flexslider .slides img {
+    height: auto;
+  }
+  #GLtopicGallery .flexslider .GLtopicGalleryItem figure {
+    margin-top: 5px;
+  }
+  #GLtopicGallery .flexslider .GLtopicGalleryItem h3 {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+  }
+  .GLtopicGallerySep {
+    height: 1px;
+    background: #9EAEB7;
+    transform: scaleY(0.3);
+    -webkit-transform: scaleY(0.3);
+    position: relative;
+    display: block;
+    width: 90%;
+    float: left;
+    margin: 10px 5% 0;
+  }
+  #GLtopicGallery .flexslider .flex-direction-nav a {
+    background-color: transparent;
+    opacity: 1;
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    position: absolute;
+    top: -30px;
+    z-index: 10;
+    overflow: hidden;
+  }
+  #GLtopicGallery .flexslider .flex-direction-nav a {
+    opacity: 1;
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    position: absolute;
+    top: -30px;
+    z-index: 10;
+    overflow: hidden;
+  }
+  #GLtopicGallery .flexslider .flex-direction-nav a:hover {
+    color: #C8C9CA;
+  }
+  #GLtopicGallery .flexslider .flex-direction-nav a:before {
+    font-family: "fontAwesome";
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 17px;
+    line-height: 25px;
+    margin-left: 7px;
+  }
+  #GLtopicGallery .flexslider .flex-direction-nav .flex-next {
+    right: 20px;
+    top: 34px;
+    z-index: 9;
+  }
+  #GLtopicGallery .flexslider .flex-direction-nav .flex-prev {
+    right: 55px;
+    top: 34px;
+    left: inherit;
+    z-index: 9;
+  }
+  #GLtopicGallery .flexslider a.flex-prev:before {
+    margin-left: 5px;
+  }
+  
+  /*****************************************************************
+   * SPECIAL PAGE
+   *****************************************************************/
+  #GLmain.GLspecialPageMain .GLhead {
+    display: none;
+  }
+  .GLspecialIntro {
+    margin-bottom: 50px;
+  }
+  .GLspecialIntro figure {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+  .GLspecialIntro .GLtitle {
+    color: #FFFFFF;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'pt_serifregular', serif;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .GLspecialIntro .GLstoryTitle {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 15%;
+    }
+    .GLspecialIntro .GLstoryTitle a {
+      color: #FFFFFF;
+    }
+    .GLspecialIntro .GLstorySummary {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 5%;
+      color: #FFFFFF;
+    }
+    .GLspecialPageMain .GLsection {
+      margin-top: -50px
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .GLspecialIntro .GLstoryTitle {
+      margin-bottom: 10%;
+    }
+    .GLspecialIntro .GLstorySummary {
+      margin-bottom: 5%;
+    }
+    .GLspecialPageMain .GLasideSocial {
+      margin-top: 0;
+      top: 0;
+    }
+    .GLspecialPageItem {
+      margin: 50px 0;
+    }
+  }
+  
+  
+  /*****************************************************************
+   * STORY - Back to top
+   *****************************************************************/
+  #GLbacktotop {
+    cursor: pointer;
+    display: none;
+    left: 50%;
+    margin-left: -60px;
+    position: fixed;
+    bottom: 10px;
+    font-size: 90%;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    background-color: #2A343F;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    filter: alpha(opacity=50);
+    -khtml-opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    color: #FFF;
+    font-size: 14px;
+    z-index: 1000;
+  }
+  #GLbacktotop:hover {
+    filter: alpha(opacity=80);
+    -khtml-opacity: 0.8;
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+  }
+  #GLbacktotop i {
+    color: #FFFFFF;
+  }
+  /*****************************************************************
+   * STORY - Toast Flyin
+   *****************************************************************/
+  #GLtoastFlyin {
+    display: none;
+  }
+  @media screen and (min-width: 420px) {
+    #GLtoastFlyin {
+      position: fixed;
+      display: block;
+      bottom: 0;
+      z-index: 9999;
+    }
+    #GLtoastFlyin.right {
+      right: -320px;
+    }
+    #GLtoastFlyin.GLtoastFlyinContainer {
+      background: #FFFFFF;
+      width: 320px;
+      min-height: 220px;
+      -webkit-box-shadow: 0 0 10px #999;
+      -moz-box-shadow: 0 0 10px #999;
+      box-shadow: 0 0 10px #999;
+    }
+    #GLtoastFlyin .GLtoastFlyinHeader{
+      border-top: 10px solid #FF4000;
+    }
+    #GLtoastFlyin .close {
+      float: right;
+      padding: 8px 15px 0;
+      color: #939393;
+      font-weight: 700;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    #GLtoastFlyin .GLtoastFlyinText {
+      font-size: 24px;
+      padding: 10px;
+      color: #373737;
+      font-weight: lighter;
+    }
+  }
+  /*****************************************************************
+   * Story - Intelligent tagging
+   *****************************************************************/
+  a.GLhelp {
+    border-bottom: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: #FF4000;
+    cursor: help;
+    color:inherit;
+  }
+  a.GLhelp:hover {
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #FF4000;
+  }
+  .GLmodalArticle {
+    display: block;
+    /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 440px;
+    height: 185px;
+    /* Fallback for non-webkit */
+    margin: 0 auto;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .GLmodalArticle p { text-align: left; }
+  .GLmodalArticle p a { color: inherit; }
+  /*modal*/
+  .modal.GLmodalHelp {
+    overflow: hidden;
+    top: 30%;
+  }
+  .GLmodalHelp .modal-dialog {
+    margin-right: auto;
+    margin-left: auto;
+    top: 50%;
+    width: 440px;
+  }
+  body.modal-open {
+    overflow: scroll; /* body content is scrollable when modal is open */
+  }
+  .GLmodalHelp .modal-header {
+    cursor: move;
+  }
+  .modal.fade.ui-draggable-dragging.GLmodalHelp {
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+  /*****************************************************************
+   * Story - Aside - WIDE
+   *****************************************************************/
+  .GLmainWide .GLaside {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+    z-index: 1/*-1*/;
+  }
+  .GLasideUpload {
+    margin-top: 45px;
+  }
+  .GLasideUpload input {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .GLasideUpload .GLasideUploadForm {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+  .GLasideUpload .GLasideUploadForm li {
+    margin-bottom: 15px;
+    font-family: 'pt_serifbold', serif;
+    font-weight: 800;
+  }
+  .GLasideUpload .GLasideUploadForm button {
+    display: inline-block;
+    float: right;
+    overflow: visible;
+    min-width: 90px;
+    margin: 15px 0 0;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    color: #FFFFFF;
+    background: #009388;
+  }
+  .GLasideUpload .GLasideUploadForm button:hover {
+    background: #408887;
+  }
+  @media screen and (min-width: 992px) {
+    .GLcontent.GLwide {
+      /*width: 100%;*/
+    }
+    .GLcontent.GLwide .GLcontentInside {
+      /*width: 1000%;*/
+    }
+    .GLcontent.GLwide .GLstoryFigure {
+      margin-top: -45px;
+      margin-left: -25px;
+      width: calc(100% + 50px);
+    }
+    .GLcontent.GLwide h2.GLstoryTitle {
+      /*width: 70%;*/
+      background-color: #FFFFFF;
+      padding: 2% 2% 0 25px;
+      margin-left: -25px;
+      position: relative;
+    }
+    .GLmainWide .GLaside {
+      float: right;
+      width: 30%;
+    }
+    .GLmainWide .GLasideSection {
+      position: fixed;
+      width: 30%;
+      padding-left: 2%;
+      top: 0;
+    }
+    .GLasideUpload {
+      margin-top: 620px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .GLasideUpload {
+      margin-top: 50px;
+    }
+  }
+  /*****************************************************************
+   * Story Gallery - wide
+   *****************************************************************/
+  .GLwide .GLwideStoryGalleryContainer {
+    width: 100%;
+    /*position: relative;*/
+    /*display: table;*/
+    margin-top: 40px;
+    margin-bottom: 40px;
+    z-index: 9;
+  }
+  .GLwide .GLwideStoryGallery {
+    margin-left: -25px;
+    margin-right: -25px;
+    width: calc(100% + 50px);
+  }
+  .GLwideStoryGalleryContainer .flexslider .slides li {
+    /*width: calc(12.3% + 7px)!important;*/
+  }
+  .GLwide .GLgallerySeeAlsoItem  {
+    width: 50%;
+    float: left;
+  }
+  .GLwide .GLgallerySeeAlsoItem h2.GLstoryTitle {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 800;
+    margin-top: 5px;
+    background-color: transparent;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+    width: 100%;
+    padding-right: 2%;
+  }
+  .GLwide .GLgallerySeeAlsoItem .GLstoryLocation {
+    margin: 10px 0;
+  }
+  .GLwide .GLgallerySeeAlsoItem time:before {
+    content: none;
+  }
+  @media screen and (min-width: 768px) {
+    .GLwide .GLwideStoryGallery {
+      margin-left: -25px;
+      margin-right: -25px;
+      width: calc(100% + 50px);
+    }
+    .GLwideStoryGalleryContainer .flexslider .slides li {
+      /*width: calc(12% + 31px)!important;*/
+      max-width: 100%;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .GLwide .GLwideStoryGallery {
+      margin-left: -25px;
+      width: calc(100% + 25px);
+    }
+  }
+  /*****************************************************************
+   * Story - Blockquote
+   *****************************************************************/
+  blockquote {
+    border: none;
+    margin: 0;
+  }
+  .GLcontent .GLblockquote {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 0 0 0 20px;
+    text-align: left;
+    border-left: 5px solid #00937D;
+    margin: 20px 40px 20px 0;
+  }
+  .GLcontent .GLblockquote {
+    color: #434F51;
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .GLcontent .GLblockquote span {
+     color: #7C898F;
+     font-family: 'pt_sansregular',sans-serif;
+     font-size: 14px;
+     margin-top: 15px;
+     display: block;
+  }
+  @media screen and (min-width: 420px) {
+    .GLcontent .GLblockquote {
+      width: 40%;
+    }
+  }
+  /*****************************************************************
+   * Story - Aside
+   *****************************************************************/
+  .GLaside {
+    position: relative;
+    float: right;
+    right:0;
+    top:0;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .GLasideSection {
+    position: relative;
+  }
+  .GLasideBreadcrumbs {
+    margin-bottom:30px;
+  }
+  .GLasideBreadcrumbs h2 {
+    font-size: 28px;
+    line-height: 30px;
+    font-family: 'pt_serifbold', serif;
+  }
+  .GLasideBreadcrumbs h2 a:before {
+    content: "/ ";
+    color: #000000;
+  }
+  .GLasideBreadcrumbs h2 a {
+    color: #009388;
+  }
+  .GLasideBreadcrumbs h2 a:hover {
+    color: #67b7b1;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+  }
+  .GLasideSocial {
+  }
+  .GLasideProgress {
+    display: none;
+  }
+  .GLasideLabel {
+    border-bottom: 1px solid #C8C9CA;
+    font-family: 'pt_serifbold', serif;
+    font-weight: 800;
+    font-size: 18px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  /* Tabs */
+  .tabs input[type=radio] {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+  .tabs {
+    width: 100%;
+    float: none;
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .tabs li{
+    float: left;
+    /*width: 33.3%;*/
+    width:50%;
+    border-right: 1px solid #FFFFFF;
+  }
+  .tabs li:last-child {
+    border-right: none;
+  }
+  .tabs label {
+      display: block;
+      padding: 7px 0;
+      margin-bottom: 1px;
+      background-color: #EDECEB;
+      color: #364043;
+      font-size: 12px;
+      font-weight: normal;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      position: relative;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+  }
+  .tabs label:hover {
+    background: #408887;
+    color: #FFFFFF;
+    top: 0;
+  }
+  [id^=tab]:checked + label {
+    background: #009388;
+    color: #FFFFFF;
+    top: 0;
+  }
+  [id^=tab]:checked ~ [id^=tab-content] {
+      display: block;
+  }
+  .tab-content{
+    z-index: 2;
+    display: none;
+    text-align: left;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    -webkit-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+  }
+  @media screen and (min-width: 992px) {
+    .tabs {
+      width: 100%;
+      float: left;
+    }
+  }
+  /* Socialize */
+  #GLsocialize {
+    width: 100%;
+    display: table;
+  }
+  /* Progress List Bar */
+  .GLprogress {}
+  #tehBars {}
+  .toc-title {}
+  .toc-top {
+    text-align: right;
+  }
+  .toc-storybar {
+    position: relative;
+    margin-bottom: 1px;
+    /*border-bottom: 1px solid #C8C9CA;*/
+  }
+  .GLprogress:last-child {
+    margin-bottom: .25em;
+  }
+  .GLprogress p {
+    text-align: left;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+    z-index: 100;
+    color: #383F43;
+    border-bottom: 1px solid #C8C9CA;
+  }
+  
+  .GLprogress a {
+    color: #383F43;
+  }
+  .GLprogress a:hover {
+    color: #009388;
+    -webkit-transition: all 100ms ease-out;
+      -moz-transition: all 100ms ease-out;
+      -o-transition: all 100ms ease-out;
+      -ms-transition: all 100ms ease-out;
+      transition: all 100ms ease-out;
+  }
+  .toc-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background:rgb(0,147,136);
+    background: transparent\9;
+    background: rgba(0,147,136,0.4);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99009388,endColorstr=#99009388);
+    zoom: 1;
+    -webkit-transition: width .2s;
+    -moz-transition: width .2s;
+    -ms-transition: width .2s;
+    -o-transition: width .2s;
+    transition: width .2s;
+  }
+  @media screen and (min-width: 420px) {
+    
+  }
+  @media screen and (min-width: 768px) {
+    #GLlistProgress.f-nav {
+      /* position:fixed;
+      top:30px;
+      width:100%; */
+      margin-top:20;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .GLaside {
+      position: absolute;
+      width: 30%;
+      padding-left:1%;
+    }
+    .GLasideSection {
+      max-width: 250px;
+      top: 30px;
+    }
+    .GLasideBreadcrumbs h2 {
+      font-size: 18px;
+    }
+    .GLasideSocial {
+      display: block;
+      margin-top: 67px;
+    }
+    .GLmainWide .GLasideSocial {
+      display: block;
+      margin-top: 40px;
+    }
+    .GLasideProgress {
+      display: block;
+      margin-top: 60px;
+    }
+    .GLasideSeeAlso {
+      display: block;
+      margin-top: 350px;
+    }
+    .GLasideSeeAlso .tab-content {
+      display: block;
+    }
+    .GLasideSeeAlso .GLasideLabel {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1090px) {
+    .GLasideSection {
+      max-width: 270px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .GLasideSection {
+      max-width: 320px;
+    }
+    .GLasideBreadcrumbs h2 {
+      font-size: 23px;
+    }
+    .GLaside {
+      padding-right:2%;
+    }
+  }
+  /*****************************************************************
+   * Story - Tag
+   *****************************************************************/
+  .GLtagsContainer {
+    width: 60%;
+    margin: 24px 0 10px;
+    list-style: none;
+    overflow: hidden; 
+    padding: 0;
+    right: 0;
+    position: absolute;
+  }
+  .GLtagsList {
+    float: right;
+    list-style: none;
+    overflow: hidden; 
+    padding: 0;
+  }
+  .GLtagsList li {
+    float: left; 
+  }
+  .GLtag {
+    font-size: 13px;
+    line-height: 20px;
+    height: 22px;
+    padding: 0 20px;
+    margin: 0 10px 10px 0;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    border-width: 1px;
+    border-style: solid;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    color: #009388;
+    border-color: #808080;
+    background-color: #FFFFFF;
+  }
+  .GLtag:hover {
+    color: #333333;
+    border-color: #A4A4A4;
+  }
+  /*****************************************************************
+   * Story - Notification
+   *****************************************************************/
+  #GLstoryNotification {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    background-color: #2D4254;
+    z-index: 130;
+    display: table;
+    min-height: 59px; 
+  }
+  .GLstoryNotificationHeader {
+    background-color: #1E1E1E;
+    color: #FFF;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 7px 0 7px 10px;
+    position: relative;
+    width: 80px;
+    display: table-cell;
+    table-layout: fixed;
+    vertical-align: top;
+    height: 100%;
+    letter-spacing: 1px;
+  }
+  .GLstoryNotificationHeader:before {
+    content: "DON'T MISS";
+    text-transform: uppercase;
+    display: block;
+    font-weight: 700;
+    position: relative;
+    line-height: normal;
+    font-size: 14px;
+    letter-spacing: normal;
+  }
+  .GLstoryNotificationHeader:after {
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    left: 80px;
+    margin-bottom: 20px;
+    border-width: 10px 0 10px 11px;
+    top: calc(50% - 10px);
+    border-color: transparent transparent transparent #1E1E1E;
+  }
+  a.GLstoryNotificationHeaderSection {
+    color: #009388;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 6px 0 0;
+    margin: 0;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    text-decoration: none;
+  }
+  a.GLstoryNotificationHeaderSection:hover {
+    color: #FFFFFF;
+  }
+  .GLstoryNotificationItem {
+    color: #FFF;
+    font-family: 'pt_sansregular',Sans-Serif;
+    padding: 6px 94px 5px 20px;
+    vertical-align: middle;
+    min-height: 44px;
+  }
+  a.GLstoryNotificationItemTitle {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+    position: relative;
+    text-decoration: none;
+  }
+  a.GLstoryNotificationItemTitle:hover {
+    color: #FFFFFF;
+  }
+  a.GLstoryNotificationClose {
+    font-size: 13px;
+    font-family: "fontAwesome";
+    color: #99B1BE;
+    position: absolute;
+    right: 13px;
+    top: 7px;
+    text-decoration: none;
+  }
+  a.GLstoryNotificationClose:hover {
+    color: #FFFFFF;
+  }
+  a.GLstoryNotificationClose:after {
+    content: "\f00d";
+  }
+  
+  @media screen and (min-width: 420px) {
+    #GLstoryNotification {
+      min-height: 44px; 
+    }
+    .GLstoryNotificationHeader {
+      width: 130px;
+    }
+    .GLstoryNotificationHeader:after {
+      left: 130px;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    #GLstoryNotification {
+      min-height: 58px;
+      width: 545px;
+    }
+    .GLstoryNotificationHeader {
+      padding: 7px 10px 8px 12px;
+      width: 150px;
+    }
+    .GLstoryNotificationHeader:after {
+      left: 150px;
+    }
+    .GLstoryNotificationItem {
+      padding: 8px 104px 11px 20px;
+      vertical-align: baseline;
+    }
+    .GLstoryNotificationClose {
+      right: 12px;
+    }
+    .GLstoryNotificationItemTitle {
+      padding-right: 22px;
+      font-size: 14px;
+      display: inline;
+      letter-spacing: -.2px;
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    #GLstoryNotification {
+      left: calc(50% - -15px);
+    }
+  }
+  /*****************************************************************
+   * Advertising
+   *****************************************************************/
+  .GLadv-300 {
+  
+  }
+  .GLadv-300 a:before {
+    content: 'ADVERTISEMENT';
+    font: 10px 'pt_sansregular',Sans-serif;
+    line-height: 11px;
+    color: #999;
+    min-height: 18px;
+  }
+  
+  .GLadv-728 {
+    width:100%;
+    max-width:728px;
+    display:table;
+    margin:40px auto;
+  }
+  .GLadv-728 a:before {
+    content: 'ADVERTISEMENT';
+    font: 10px 'pt_sansregular',Sans-serif;
+    line-height: 11px;
+    color: #999;
+    min-height: 18px;
+  }
+  
+  
+  @media screen and (min-width: 992px) {
+    .GLadv-300 {
+      max-width: 250px;
+      margin-top: 40px;
+    }
+  }
+  @media screen and (min-width: 1090px) {
+    .GLadv-300 {
+      max-width: 270px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .GLadv-300 {
+      max-width: 320px;
+    }
+  }
+  /*****************************************************************
+   * 404
+   *****************************************************************/
+  .GL404 {
+    height: 100vh;
+    margin-top: 80px;
+  }
+  .GL404 h2 {
+    font-size: 30px;
+    line-height: 32px;
+    text-align: center;
+    margin: 100px 10px 0;
+  }
+  .GL404 h2 span {
+    color: #dc4e41;
+  }
+  .GL404 p {
+    text-align: center;
+    margin: 20px 10px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .GL404 input {
+    padding: 0;
+    border: 0;
+    width: 100%;
+  }
+  .GL404 #search404 {
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid #BEBEBE;
+    margin: 2px 20px 32px;
+    width: auto;
+    position: relative;
+    clear: both;
+  }
+  .GL404 #search404 input[type="text"] {
+    background: url(/img/icons/icon-search-grey.png) no-repeat 10px 13px transparent;
+    width: 100%;
+    position: relative;
+    color: #321432;
+    border: 0 none;
+    font-size: 13px;
+    padding-left: 45px;
+    line-height: 46px;
+    height: 40px;
+    outline: none;
+    display: block;
+  }
+  @media screen and (min-width: 420px) {
+    .GL404 #search404 {
+      margin-left: 40px;
+      margin-right: 40px;
+      width: auto;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .GL404 h2 {
+      margin: 0 40px;
+    }
+    .GL404 p {
+      margin: 20px 130px;
+    }
+    .GL404 #search404 {
+      margin: 0 auto;
+      width: 480px;
+    }
+  }
+  /*****************************************************************
+   * TAKE OVER
+   *****************************************************************/
+  body.takeover {background-attachment:fixed;background-position: top center; background-repeat:no-repeat;margin-top:145px;padding-top:0;}
+  a#skinlink {position:absolute;top:0;right:0;bottom:0;left:0;display:block;z-index:1;}
+  #skinlink span {display:none;}
+  .takeover div.container {position:relative;z-index:2;background-color:transparent;}
+  .takeover #GLmain {margin-top:0;}
+  
+  /* BRANDS */
+  .fly-ad {background-image: url(/img/adv/fly-bkg-mobile.jpg);}
+  .moviesfestival-ad {background-image: url(/img/adv/moviesfestival-bkg-mobile.jpg);}
+  .cocacola-ad {background-image: url(/img/adv/cocacola-bkg-mobile.jpg);}
+  
+  @media screen and (min-width: 768px) {
+    body.takeover {margin-top:120px;}
+    .takeover #sidebar {position:absolute;margin-top:0;top:0;}
+    .takeover #sidebar.f-nav {z-index:9999;position:fixed;top:0;bottom:auto!important;}
+    
+    /* BRANDS */
+    .fly-ad {background-image: url(/img/adv/fly-bkg-tablet.jpg);}
+    .moviesfestival-ad {background-image: url(/img/adv/moviesfestival-bkg-tablet.jpg);}
+    .cocacola-ad {background-image: url(/img/adv/cocacola-bkg-tablet.jpg);}
+    }
+  @media screen and (min-width: 992px) {
+    /* BRANDS */
+    .fly-ad {background-image: url(/img/adv/fly-bkg.jpg);}
+    .moviesfestival-ad {background-image: url(/img/adv/moviesfestival-bkg.jpg);}
+    .cocacola-ad {background-image: url(/img/adv/cocacola-bkg.jpg);}
+  }
+  @media screen and (max-width: 767px) {
+  .takeover #sidebar {position:absolute;margin-top:0;top:0;left:-145px;}
+  .takeover .active #sidebar.f-nav {z-index:9999;position:fixed;top:45px;bottom:auto!important;left:0;}
+  }
+  /*****************************************************************
+   * Widget
+   *****************************************************************/
+  .contentWidget {
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  .center.contentWidget {
+    display:table;
+  }
+  
+  #listBlogPlaceholder {
+    list-style:none;
+  }
+  
+  /** CUSTOM PART **/
+  #selectAccessLevelId{
+      display: none;
+  }
+  
+  .breaking-news-headline {
+      display: block;
+      position: absolute;
+      font-family: arial;
+      font-size: 13px;
+      margin-top: -22px;
+      color: white;
+      margin-left: 150px;
+      text-align: right;
+  }
+  
+  .breaking-news-title {
+      background-color: #FC191A;
+      display: block;
+      height: 35px;
+      width: 90px;
+      font-family: arial;
+      font-size: 11px;
+      position: absolute;
+      top: 0px;
+      margin-top: 0px;
+      /* margin-left: 20px; */
+      padding-top: 10px;
+      padding-left: 10px;
+      z-index: 3;
+      color: white;
+      font-weight: bold;
+    &:before {
+      content:"";
+      position: absolute;
+      display: block;
+      width: 0px;
+      height: 0px;
+      top: 0;
+      left: -12px;
+      border-left:12px solid transparent;
+      border-right: 0px solid transparent;
+      border-bottom: 30px solid #FFEA00;
+    }
+    &:after {
+      content:"";
+      position: absolute;
+      display: block;
+      width: 0px;
+      height: 0px;
+      right: -12px;
+      top: 0;
+      border-right:12px solid transparent;
+      border-left: 0px solid transparent;
+      border-top: 30px solid #FFEA00;
+    }
+  }
+  
+  #breaking-news-colour {
+      height: 35px;
+      width: 100%;
+      background-color: #9C2224;
+  }
+  
+  #breaking-news-container {
+      height: 35px;
+      width: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0px;
+      z-index: 9999999;
+      left: 0px;
+    &:before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-color: #3399FF;
+      position: absolute;
+      z-index: 2;
+    }
+  }
+  
+  .animated {
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-duration: 0.2s;
+    -moz-animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+  }
+  
+  .delay-animated {
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-duration: 0.4s;
+    -moz-animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.3s; 
+    animation-delay: 0.3s;
+  }
+  
+  .scroll-animated {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-duration: 3s;
+    -moz-animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1; 
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.5s; 
+    animation-delay: 0.5s;
+  }
+  
+  .delay-animated2 {
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-duration: 0.4s;
+    -moz-animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1; 
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.5s; 
+    animation-delay: 0.5s;
+  }
+  
+  .delay-animated3 {
+    -webkit-animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-duration: 5s;
+    -moz-animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1; 
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.5s; 
+    animation-delay: 3s;
+  }
+  
+  .fadein {
+    -webkit-animation-name: fadein;
+    -moz-animation-name: fadein;
+    -o-animation-name: fadein;
+    animation-name: fadein;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {
+      margin-left: 1000px
+    }
+    to {
+      
+    } 
+  }  
+  @-moz-keyframes fadein {
+    from {
+      margin-left: 1000px
+    }
+    to {
+      
+    }  
+  }
+  
+  .slidein {
+    -webkit-animation-name: slidein;
+    -moz-animation-name: slidein;
+    -o-animation-name: slidein;
+    animation-name: slidein;
+  }
+  
+  @keyframes marquee {
+    0% { 
+      left: 0;
+    }
+    20% { 
+      left: 0; 
+    }
+    100% { left: -100%; }
+  }
+  
+  .marquee {
+    animation: marquee 10s linear infinite;
+    -webkit-animation-duration: 10s;
+    -moz-animation-duration: 10s;
+    -webkit-animation-delay: 0.5s; 
+    animation-delay: 3s;
+  }
+  
+  @-webkit-keyframes slidein {
+    from {
+      margin-left: 800px
+    }
+    to {
+      margin-top: 0px
+    } 
+  }  
+  @-moz-keyframes slidein {
+    from {
+      margin-left: 800px
+    }
+    to {
+      margin-top: 0px
+    }  
+  }
+  
+  .slideup {
+    -webkit-animation-name: slideup;
+    -moz-animation-name: slideup;
+    -o-animation-name: slideup;
+    animation-name: slideup;
+  }
+  @-webkit-keyframes slideup {
+    from {
+      margin-top: 30px
+    }
+    to {
+      margin-top: 0;
+    } 
+  }  
+  @-moz-keyframes slideup {
+    from {
+      margin-top: 30px
+    }
+    to {
+      margin-top: 0;
+    } 
+  }
+  
+  .popover{
+          height: 70px;
+  }
+  .popover.bottom{
+      border-width: 1px;
+      border-color: #c8c8c8;
+  }
+  .popover.bottom:after{
+          content: none;
+  }
+  .heart {
+        font-size: 25px;
+      color:red;
+  }
+  .singleBookmark{
+      width: 33%;
+      display: inline-table;
+  }
+  .GLnavSocialItem {
+      display: inline;
+  }
+  .GLnavSocialItem a {
+      padding: 0 10px;
+  }
+  @media screen and (min-width: 768px) {
+  
+    .navbar-header .GLheaderSocial {
+        padding: 0px;
+      }
+      
+      .GLnavSocialItem a{
+          padding: 0px;
+      }
+  }
+  
+  .GListMap iframe {
+      width : 100%!important;
+  }
+  
+  twitter-widget#twitter-widget-1 {
+      margin: 0 auto!important;
+  }
+  

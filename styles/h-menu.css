@@ -1,0 +1,192 @@
+@media screen and (min-width: 768px) {
+    .Homepage-Top #search input[type="text"] {
+        background: url(/img/icons/icon-search.png) no-repeat 10px 13px #2F3439;
+    }
+    .Homepage-Top #sidebar .GLnavLogo a {
+        height: auto;
+    }
+    .Homepage-Top #GLweather {
+        top:25px;
+    }
+    .Homepage-Top #sidebar .GLnavLogo img {
+        /*display: none;*/
+        background-image: url('/img/hp-top-logo.png');
+        margin: 0 auto;
+    }   
+    .Homepage-Top #sidebar .GLsubnavCategory {
+        display:none;
+    }
+    .Homepage-Top #sidebar .GLnavSocial {
+        width: 147px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+    }
+    .Homepage-Top #sidebar .GLnavSocialItem a span.fa {
+        margin-top:5px;
+    }
+    .Homepage-Top #sidebar .GLnavLogo {
+        margin: 0 auto;
+        width: 148px;
+        height: 40px;
+        background-color: transparent;
+        background-image: url('/img/hp-top-logo.png');
+        background-repeat: no-repeat;
+        background-position-y: inherit;
+    }
+    .Homepage-Top #sidebar .GLnavSearch {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 58px;
+    }
+    .Homepage-Top #sidebar .GLpremium {
+        position: absolute;
+        top: 0;
+        right: 154px;
+        width: auto;
+    }
+    .Homepage-Top #sidebar li.GLpremium a {
+        top:0;
+        padding: 13px 14px 10px 14px;
+        color:#fff;
+    }
+    .Homepage-Top #sidebar li.GLpremium .GLpremiumSeparator:after {
+        color:#321432;
+    }
+    .Homepage-Top #sidebar, .Homepage-Top.takeover #sidebar {
+        width:100%;
+        height:40px;
+        background-color: #394149;
+        border-bottom:1px solid #394149;
+        position:relative;
+    }
+    .Homepage-Top #sidebar .nav {
+        display: table;
+        margin: 0 auto;
+        width:auto;
+        height:38px;
+        background-color: transparent;
+    }
+    .Homepage-Top .nav>li, .Homepage-Top #sidebar li a {
+        float:left;
+        position:relative;
+        top:14px;
+    }
+    .Homepage-Top .GLexpander {
+        position:relative;
+    }
+    .Homepage-Top #sidebar .GLexpand {
+        top:35px;
+        opacity:0;
+        width:100%;
+    }
+    .Homepage-Top #sidebar .GLexpander:hover .GLexpand {
+        left:0;
+        top:38px;
+        height:100%;
+        opacity:1;
+        -webkit-transition: all 200ms ease-out;
+        -moz-transition: all 200ms ease-out;
+        -o-transition: all 200ms ease-out;
+        -ms-transition: all 200ms ease-out;
+        transition: all 200ms ease-out;
+    }
+    .Homepage-Top #sidebar li ul li a {
+        width:100%;
+        background-color:#009388;
+    }
+    .Homepage-Top #sidebar li ul li a:hover {
+        background-color:#5ec2bb;
+    }
+    .Homepage-Top #sidebar li.GLnavBlog a {
+        background-color: transparent;
+    }
+    .Homepage-Top #sidebar li.GLnavBlog a:hover {
+        background-color: transparent;
+    }
+    .Homepage-Top #sidebar li.GLnavSpecial a {
+        border-top:0;
+    }
+    .Homepage-Top #sidebar li a {
+        color:#321432;
+    }
+    .Homepage-Top #sidebar li:hover > a {
+        background:transparent;
+    }
+    .Homepage-Top #sidebar li.GLexpander:hover > a {
+        background:#009388;
+    }
+    .Homepage-Top #sidebar li.GLpremium a:hover {
+        background:transparent;
+        color:#009388;
+        -webkit-transition: all 200ms ease-out;
+        -moz-transition: all 200ms ease-out;
+        -o-transition: all 200ms ease-out;
+        -ms-transition: all 200ms ease-out;
+        transition: all 200ms ease-out;
+    }
+    .Homepage-Top #sidebar li a:hover {
+        background:transparent;
+        color:#0D9389;
+        -webkit-transition: all 200ms ease-out;
+        -moz-transition: all 200ms ease-out;
+        -o-transition: all 200ms ease-out;
+        -ms-transition: all 200ms ease-out;
+        transition: all 200ms ease-out;
+    }
+    .Homepage-Top #sidebar .GLexpander a:hover {
+        color:#ffffff;
+    }
+    .Homepage-Top #sidebar li.GLnavBlog a i, .Homepage-Top #sidebar li.GLnavSpecial a i, .Homepage-Top #sidebar li.GLnavSpecial form i, .Homepage-Top #sidebar li.GLnavSpecial form:before {
+        color:#321432;
+    }
+    .Homepage-Top #sidebar li.GLnavSpecial #myUpSearch {
+        background:transparent;
+        top:14px;
+    }
+    .Homepage-Top #sidebar li.GLnavSpecial form:before {
+        padding: 9px 5px 9px 15px;
+    }
+    .Homepage-Top #sidebar li.GLnavSpecial form input[type=submit] {
+        color:#321432;
+    }
+    .Homepage-Top #sidebar li.GLnavSpecial #myUpSearch:hover input[type=submit]{
+        color:#009388;
+        background:transparent;
+    }
+    .Homepage-Top a span.fa.fa-angle-right {
+        margin-left: 14px;
+        transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        color:#321432;
+    }
+     .Homepage-Top #GLmain {
+        width:100%;
+        margin-left:0;
+    }
+    .Homepage-Top .GLhead {
+        padding-top:0;
+        height:auto;
+    }
+    .Homepage-Top .GLhead .GLheadTitle {
+        display:none;
+    }
+    .Homepage-Top .GLhead .GLheadSectionLabel {
+        top:70px;
+    }
+    .Homepage-Top .GLsection {
+        margin-top:58px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .Homepage-Top #GLmain {
+        width:1280px;
+    }
+}
+

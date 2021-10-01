@@ -1,0 +1,71 @@
+.jssocials-shares {
+  margin: 0; }
+
+.jssocials-shares * {
+  box-sizing: border-box; }
+
+.jssocials-share {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #EDECEB;
+  margin-right: 0.7%;
+  width: 24.25%;
+  height: 70px;}
+
+.jssocials-share:first-child {
+  margin-left: 0; }
+
+.jssocials-share:last-child {
+  margin-right: 0; }
+
+.jssocials-share-logo {
+  width: 1em;
+  vertical-align: middle;
+  font-size: 1.5em; }
+
+img.jssocials-share-logo {
+  width: auto;
+  height: 1em; }
+
+.jssocials-share-link {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1; }
+  .jssocials-share-link.jssocials-share-link-count {
+    padding-top: 13px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%; }
+    .jssocials-share-link.jssocials-share-link-count .jssocials-share-count {
+      display: block;
+      margin-top: 7px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #7C898F; }
+  .jssocials-share-link.jssocials-share-no-count {
+    padding-top: 13px; }
+    .jssocials-share-link.jssocials-share-no-count .jssocials-share-count {
+      height: 1em; }
+
+.jssocials-share-label {
+  padding-left: 0.3em;
+  vertical-align: middle; }
+
+.jssocials-share-count-box {
+  display: inline-block;
+  height: 1.5em;
+  padding: 0 0.3em;
+  vertical-align: middle;
+  cursor: default; }
+  .jssocials-share-count-box.jssocials-share-no-count {
+    display: none; }
+    
+.jssocials-share-count {
+  line-height: 1.5em;
+  vertical-align: middle; }
+  
+.jssocials-share-link:hover .jssocials-share-logo {
+  color: #FFFFFF; }
+.jssocials-share-link:hover .jssocials-share-count {
+  color: #FFFFFF; }

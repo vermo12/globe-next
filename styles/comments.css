@@ -1,0 +1,116 @@
+.em-comment-area .em-post-list .em-post .em-post-reply{
+	cursor: pointer;
+    font-family: pt_serifregular;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 0.5em 1.25em 0;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding-top: 0.75em;
+    padding-right: 1.5em;
+    padding-bottom: 0.8125em;
+    padding-left: 1.5em;
+    font-size: 1em;
+    background-color: #009388;
+    border: 1px solid #009388;
+    color: #FFFFFF!important;
+	opacity: 1!important;
+}
+
+.em-comment-area .em-post-list .em-post .em-post-reply:hover {
+    background-color: #FFFFFF;
+    color: #009388!important;
+    border: 1px solid #009388;
+}
+
+.em-comment-area .em-post-list .em-post .em-post-reply .em-reply{
+	margin-right: 0px!important;
+}
+
+
+.em-comment-area .em-post-list .em-post .em-post-reply .em-reply-image{
+	color: inherit!important;
+    font-family: pt_serifregular!important;
+    opacity: 1!important;
+		margin-right: 0;
+}
+
+
+.em-comment-area .em-post-list .em-post .em-post-reply .em-reply{
+    opacity: 1!important;
+	color: inherit!important;
+}
+
+.em-comment-area .em-post-list .em-post .em-post-content{
+	border-bottom: 1px solid #ddd;
+    margin-top: 40px;	
+}
+
+.em-comment-area .em-post-list .em-post .em-child-list .em-post .em-post-content .em-avatar-user,
+.em-comment-area .em-post-list .em-post .em-post-content .em-avatar-user, 
+.em-comment-area .em-reply-area-container .em-avatar-user {
+	background-image: url("/assets/themes/GVM Evo/img/comments/member4.jpg");
+    background-size: 4em 4em;
+}
+
+.em-comment-area .em-post-list .em-post .em-post-content .em-avatar-user img,
+.em-comment-area .em-reply-area-container .em-avatar-user img {
+    display: none;
+}
+
+#cobalt-comments .text-warning{  
+	color: #009388;
+}
+
+.GLstoryComments .GLleaveComment {
+	padding-bottom: 0px; 
+}
+
+.em-comment-area .em-reply-area-container .em-send-post {
+    text-align: left;
+}
+
+#cobalt-comments .em-reply-area-container .btn-primary {
+    cursor: pointer;
+    font-family: pt_serifregular;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 0 1.25em;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding-top: 0.75em;
+    padding-right: 1.5em;
+    padding-bottom: 0.8125em;
+    padding-left: 1.5em;
+    font-size: 1em;
+    background-color: #009388;
+    border: 1px solid #009388;
+    color: #FFFFFF!important;
+	border-radius: 0;
+}
+
+#cobalt-comments .em-reply-area-container .btn-primary:hover {
+    background-color: #FFFFFF;
+    color: #009388!important;
+    border: 1px solid #009388;
+}
+
+.em-comment-area .em-reply-area-container .em-send-post {
+    text-align: left; 
+}
+
+#cobalt-comments .em-reply-area-container textarea {
+    border-radius: 0;
+}
+
+.em-comment-area .em-reply-area-container .em-send-post {
+    margin-top: 0.4em;
+}
+
+.em-comment-area .em-post-list .em-child-list.em-post-list .em-post-content .em-post-body footer {
+    padding-bottom: 40px;
+}

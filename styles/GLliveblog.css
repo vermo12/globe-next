@@ -1,0 +1,43 @@
+.liveblogpost {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.liveblogpost__info .user__info,
+.liveblogpost__info .user__avatar {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.liveblogpost__info .user__info h5 {
+  margin-top: 0;
+  margin-bottom: 21px;
+  margin-left: 10px;
+}
+
+.liveblogpost__info time {
+    text-transform: uppercase;
+    line-height: 12px;
+    font: 11px 'pt_sansbold', sans-serif;
+    letter-spacing: .5px;
+    color: #909090;
+}
+
+.liveblogpost__info .user__avatar {
+  width: 60px;
+  height: 60px;
+}
+.liveblogpost__title {
+  margin-bottom: 21px;
+  float: right;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}

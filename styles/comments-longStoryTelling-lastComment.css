@@ -1,0 +1,159 @@
+.em-comment-area .em-post-list .em-post .em-post-reply{
+	opacity: .52!important;	
+	cursor: pointer;
+    font-family: 'IM Fell Great Primer SC';
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 0 1.25em;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    font-size: 14px;
+    background-color: #8E8B87;
+    border: 1px solid #8E8B87;
+    color: #FFFFFF!important;
+}
+
+.em-comment-area .em-post-list .em-post .em-post-reply:hover {
+	background-color: #FFFFFF;
+    color: #8E8B87!important;
+    border: 1px solid #8E8B87;
+	text-decoration: none;
+    opacity: 1!important;
+}
+
+.em-comment-area .em-post-list .em-post .em-post-reply .em-reply{
+	margin-right: 0px!important;
+}
+
+
+.em-comment-area .em-post-list .em-post .em-post-reply .em-reply-image{
+	color: inherit!important;
+    font-family: pt_serifregular!important;
+    opacity: 1!important;
+		margin-right: 0;
+}
+
+
+.em-comment-area .em-post-list .em-post .em-post-reply .em-reply{
+    opacity: 1!important;
+	color: inherit!important;
+}
+
+.em-comment-area .em-post-list .em-post .em-post-content{
+	border-bottom: 1px solid #ddd;
+    margin-top: 40px;	
+}
+
+.em-comment-area .em-post-list .em-post .em-child-list .em-post .em-post-content .em-avatar-user,
+.em-comment-area .em-post-list .em-post .em-post-content .em-avatar-user, 
+.em-comment-area .em-reply-area-container .em-avatar-user {
+	background-image: url("/assets/themes/GVM Evo/img/comments/member4.jpg");
+    background-size: 4em 4em;
+}
+
+.em-comment-area .em-post-list .em-post .em-post-content .em-avatar-user img,
+.em-comment-area .em-reply-area-container .em-avatar-user img {
+    display: none;
+}
+
+#cobalt-comments .text-warning{  
+	color: #009388;
+}
+
+.GLstoryComments .GLleaveComment {
+	padding-bottom: 0px; 
+}
+
+.em-comment-area .em-reply-area-container .em-send-post {
+    text-align: left;
+}
+
+#cobalt-comments .em-reply-area-container .btn-primary {
+   	border-radius: 0;
+	cursor: pointer;
+    font-family: 'IM Fell Great Primer SC';
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 0 1.25em;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    font-size: 14px;
+    background-color: #8E8B87;
+    border: 1px solid #8E8B87;
+    color: #FFFFFF!important;
+	opacity: .52;
+}
+
+#cobalt-comments .em-reply-area-container .btn-primary:hover {
+	background-color: #FFFFFF;
+    color: #8E8B87!important;
+    border: 1px solid #8E8B87;
+	text-decoration: none;
+    opacity: 1!important;
+}
+
+.em-comment-area .em-reply-area-container .em-send-post {
+    text-align: left; 
+}
+
+#cobalt-comments .em-reply-area-container textarea {
+	height: 100px;
+    resize: none;
+    box-shadow: none;
+    border-radius: 0;
+	background-color: white;
+    font-family: "EB Garamond", serif;
+    border: 1px solid #C8C9CA;
+    color: rgba(0, 0, 0, 0.75)!important;
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+
+.em-comment-area .em-reply-area-container .em-send-post {
+    margin-top: 0.4em;
+}
+
+.em-comment-area .em-post-list .em-child-list.em-post-list .em-post-content .em-post-body footer {
+    padding-bottom: 40px;
+}
+
+.em-comment-area .em-post-list .em-post .em-post-content .em-post-body .em-post-body-inner .em-post-message{
+    font-size: 16px;
+	font-family: "EB Garamond", serif;
+}
+
+.em-comment-area .em-post-list .em-post .em-post-content .em-post-body header .em-post-author {
+    margin: 0px;
+    font-size: 20px;
+    line-height: 1.8;
+	font-weight: 300;
+    font-family: 'IM Fell Great Primer SC', serif;
+	color: #1E1D1C;
+}
+
+.em-comment-area .em-post-list .em-post .em-post-content .em-post-body header .em-time-ago {
+    margin: 0px;
+    font-size: 12px;
+    line-height: 1.8;
+	font-weight: 300;
+    font-family: 'IM Fell Great Primer SC', serif;
+	color: #1E1D1C;
+}
+
+
+	
+	
+	
+	

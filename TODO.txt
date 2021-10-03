@@ -1,0 +1,7 @@
+- finish leaf + other type
+- sections + menu api / caching
+- integrate external data
+- paywall
+- tags/categories
+- multi-site
+- theming

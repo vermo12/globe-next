@@ -5,7 +5,7 @@ export default function GenericDetails({ pageData }){
         <p>no details template found!</p>
     )
 
-    switch(pageData.sys.type){
+    switch(pageData.model.data.sys.type){
         case "article":
             details = <ArticleDetails pageData={pageData}/>
     }

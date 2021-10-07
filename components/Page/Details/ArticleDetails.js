@@ -4,7 +4,7 @@ export default function ArticleDetails({ pageData }) {
 
 
     return (
-        <article className="GLcontent" href={pageData.url} data-index="0">
+        <article className="GLcontent" href={pageData.helper.url} data-index="0">
             <h1 className="GLstoryTitle">Corbyn could support pre-Brexit election to stop no deal.</h1>
             <figure className="GLstoryFigure">
                 <img src="" title=""/>

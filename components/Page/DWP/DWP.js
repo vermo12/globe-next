@@ -3,7 +3,7 @@ import GenericFragment from '../../Fragment/GenericFragment';
 
 export default function DWP({ pageData }) {
     
-    const zonesRender = pageData.zones.map((zone) => 
+    const zonesRender = pageData.helper.zones.map((zone) => 
         zone.objects.map((object) => {
             return (
                 <GenericFragment objectData={object.objectData} linkData={object.linkData} />

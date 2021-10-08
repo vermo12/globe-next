@@ -1,17 +1,43 @@
 import moment from 'moment'
 import Link from 'next/link'
+import { findElementsInContentJson } from '../../utils/ContentUtil';
+import ResourceResolver from '../../utils/ResourceResolver';
+import RenderContentElement from '../RenderContent/RenderContentElement';
+import RenderFormattedText from '../RenderContent/RenderFormattedText';
 
-export default function ArticleFragment({objectData, linkData}) {
+export default function ArticleFragment({ objectData, linkData }) {
 
     const pubTime = moment(objectData.pubInfo.publicationTime).format('MMMM D, YYYY');
-    const imgUrl = (objectData.helper.content.mainPictureUrl?objectData.helper.content.mainPictureUrl:'/img/nothumb.jpg')
+
+    let mainPictureUrl = null;
+    try {
+        mainPictureUrl = ResourceResolver(objectData.helper.resourcesUrls[objectData.links.system.mainPicture[0].targetId])
+    } catch (e) { }
+
+    if (!mainPictureUrl) {
+        mainPictureUrl = '/img/nothumb.jpg';
+    }
+
+    let headline = null;
+    try {
+        headline = <RenderContentElement jsonElement={findElementsInContentJson(['headline'], objectData.helper.content)[0]} renderMode='teaser'/>
+    } catch (e) {
+        console.log(e)
+    }
+
+    let summary = null;
+    try {
+        summary = <RenderContentElement jsonElement={findElementsInContentJson(['summary'], objectData.helper.content)[0]}/>
+    }catch (e){
+        console.log(e)
+    }
 
     const render = (
         <article className="GLlatestStory">
             <h4 className="GLsectionLabel">&nbsp;</h4>
-            <div className="GLlatestStoryTop" style={{width: '100%'}}>
+            <div className="GLlatestStoryTop" style={{ width: '100%' }}>
                 <figure className="GLstoryFigure">
-                    <img src={imgUrl} title="" />
+                    <img src={mainPictureUrl} title="" />
                     <div className="GLstoryImageCaption">
                         <div className="GLstoryImageCaptionInner">
                             <p>Tigre caption</p>
@@ -19,15 +45,14 @@ export default function ArticleFragment({objectData, linkData}) {
                     </div>
                 </figure>
                 <h2 className="GLstoryTitle">
-                    {/* <a href="/world/0254-0d5aae99a88a-5a0b9e91a3b8-1000/index.html" dangerouslySetInnerHTML={{ __html: "<h1>Hi there!</h1>" }}> */}
                     <Link href={objectData.helper.url}>
                         <a>
-                            {objectData.helper.content.headline}
+                            {headline}
                         </a>
                     </Link>
                 </h2>
                 <p className="GLstoryByline">{objectData.authors[0]}</p>
-                <h3 className="GLstorySummary">{objectData.helper.content.summary}</h3>
+                {summary}
                 <div className="GLstoryLocation">
                     <time dateTime={pubTime}>
                         {pubTime}

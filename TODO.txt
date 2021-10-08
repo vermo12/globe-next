@@ -5,3 +5,6 @@
 - tags/categories
 - multi-site
 - theming
+
+more:
+- better image management with next/image (getting the width and height from API)

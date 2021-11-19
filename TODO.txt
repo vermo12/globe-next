@@ -1,4 +1,4 @@
-- finish leaf + other type
+- dwc
 - sections + menu api / caching
 - integrate external data
 - paywall

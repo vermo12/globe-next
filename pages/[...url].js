@@ -6,16 +6,19 @@ import GenericDetails from "../components/Page/Details/GenericDetails";
 export default function Page ( {pageData} ){
 
     let render = null;
+    let pageType = null;
     switch (pageData.model.data.sys.baseType) {
         case 'webpage':
+            pageType = "section";
             render = <DWP pageData={pageData}/>
             break;
         default:
+            pageType = "details";
             render = <GenericDetails pageData={pageData}/>
     }
 
     return (
-        <Layout>
+        <Layout pageType={pageType}>
            {render}
         </Layout>
       )

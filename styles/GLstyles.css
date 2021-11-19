@@ -64,7 +64,7 @@
   figure {
     position: relative;
   }
-  img {
+  .page-container img {
     width: 100%;
   }
   .left {

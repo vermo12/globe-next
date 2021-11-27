@@ -1,13 +1,13 @@
 import ArticleDetails from "./ArticleDetails"
 
-export default function GenericDetails({ pageData }){
+export default function GenericDetails({ cobaltData }){
     let details = (
         <p>no details template found!</p>
     )
 
-    switch(pageData.model.data.sys.type){
+    switch(cobaltData.object.data.sys.type){
         case "article":
-            details = <ArticleDetails pageData={pageData}/>
+            details = <ArticleDetails cobaltData={cobaltData}/>
     }
 
     return details;

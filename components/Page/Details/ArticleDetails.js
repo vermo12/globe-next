@@ -4,13 +4,13 @@ import { findElementsInContentJson } from "../../../utils/ContentUtil";
 import ResourceResolver from "../../../utils/ResourceResolver";
 import RenderContentElement from "../../RenderContent/RenderContentElement";
 
-export default function ArticleDetails({ pageData }) {
+export default function ArticleDetails({ cobaltData }) {
     
-    const pubTime = moment(pageData.model.data.pubInfo.publicationTime).format('MMMM D, YYYY');
+    const pubTime = moment(cobaltData.object.data.pubInfo.publicationTime).format('MMMM D, YYYY');
 
     let mainPictureUrl = null;
     try {
-        mainPictureUrl = ResourceResolver(pageData.resourcesUrls[pageData.model.data.links.system.mainPicture[0].targetId])
+        mainPictureUrl = ResourceResolver(cobaltData.pageContext.resourcesUrls[cobaltData.object.data.links.system.mainPicture[0].targetId])
     } catch (e) { }
 
     if (!mainPictureUrl) {
@@ -19,20 +19,20 @@ export default function ArticleDetails({ pageData }) {
 
     let headline = null;
     try {
-        headline = <RenderContentElement jsonElement={findElementsInContentJson(['headline'], pageData.helper.content)[0]}/>
+        headline = <RenderContentElement jsonElement={findElementsInContentJson(['headline'], cobaltData.object.helper.content)[0]}/>
     } catch (e) {
         console.log(e)
     }
 
     let content = null;
     try {
-        content = <RenderContentElement jsonElement={findElementsInContentJson(['content'], pageData.helper.content)[0]}/>
+        content = <RenderContentElement jsonElement={findElementsInContentJson(['content'], cobaltData.object.helper.content)[0]}/>
     } catch (e) {
         console.log(e)
     }
 
     return (
-        <article className="GLcontent" href={pageData.helper.url} data-index="0">
+        <article className="GLcontent" href={cobaltData.pageContext.nodesUrls[cobaltData.object.data.id]} data-index="0">
             <h1 className="GLstoryTitle">{headline}</h1>
             <figure className="GLstoryFigure">
                 <img src={mainPictureUrl} title=""/>
@@ -47,7 +47,7 @@ export default function ArticleDetails({ pageData }) {
                     {/* <span className="GLstoryBylineFaces">
                         <img src=""/>
                     </span> */}
-                    {pageData.model.data.authors.join(',')}
+                    {cobaltData.object.data.authors.join(',')}
                     <span>
                         <a href="#"><i className="fa fa-facebook"></i></a>
                         <a href="#"><i className="fa fa-twitter"></i></a>

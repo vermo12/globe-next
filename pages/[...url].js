@@ -29,7 +29,7 @@ export default function Page ( {responseData,url } ){
             break;
         default:
             pageType = "details";
-            render = <GenericDetails pageData={responseData}/>
+            render = <GenericDetails cobaltData={cobaltData}/>
     }
 
     return (

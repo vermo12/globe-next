@@ -2,19 +2,34 @@ import DWP from "../components/Page/DWP/DWP";
 import Layout from "../components/Layout/Layout";
 import { getCobaltPage } from "../lib/cobalt-cms/cobalt-api";
 import GenericDetails from "../components/Page/Details/GenericDetails";
+import { getCobaltDataHelper } from "../lib/cobalt-cms/cobalt-helpers";
 
-export default function Page ( {pageData} ){
+export default function Page ( {responseData,url } ){
+
+    const cobaltData = {
+        object: {
+          data: responseData.model.data,
+          helper: getCobaltDataHelper(responseData.model.data),
+        },
+        linkContext: null,
+        pageContext: {
+          url: url,
+          nodes: responseData.model.nodes,
+          resourcesUrls: responseData.resourcesUrls,
+          nodesUrls: responseData.nodesUrls
+        }
+      }
 
     let render = null;
     let pageType = null;
-    switch (pageData.model.data.sys.baseType) {
+    switch (cobaltData.object.data.sys.baseType) {
         case 'webpage':
             pageType = "section";
-            render = <DWP pageData={pageData}/>
+            render = <DWP cobaltData={cobaltData}/>
             break;
         default:
             pageType = "details";
-            render = <GenericDetails pageData={pageData}/>
+            render = <GenericDetails pageData={responseData}/>
     }
 
     return (
@@ -36,16 +51,18 @@ export async function getStaticPaths({}) {
 
 export async function getStaticProps({ params }) {
     console.log('RENDERING: ' + params.url.join('/'));
+    const url = params.url.join('/');
     
-    const pageData = await getCobaltPage(params.url.join('/'));
+    const responseData = await getCobaltPage(url);
     
     const props = {
-        pageData
+        responseData,
+        url
     };
 
     let revalidate = 60;
 
-    switch (pageData.model.data.sys.baseType){
+    switch (responseData.model.data.sys.baseType){
         case 'webpage':                       
             revalidate = 5;
             break;

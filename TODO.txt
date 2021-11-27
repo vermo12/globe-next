@@ -14,14 +14,16 @@ processCobaltResponse(response, url){
     
 }
 
-RENDER OBJECT OBJECt:
+RENDER OBJECT PROPS:
 
 {
     object: {
         data,
         helper
     },
-    context: {
+    linkContext: {},
+    pageContext: {
+            url,
             nodes,
             resourceUrls,
             nodesUrls

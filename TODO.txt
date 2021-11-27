@@ -8,3 +8,25 @@
 
 more:
 - better image management with next/image (getting the width and height from API)
+
+
+processCobaltResponse(response, url){
+    
+}
+
+RENDER OBJECT OBJECt:
+
+{
+    object: {
+        data,
+        helper
+    },
+    context: {
+            nodes,
+            resourceUrls,
+            nodesUrls
+            theme,
+            etc        
+        }
+    }
+}

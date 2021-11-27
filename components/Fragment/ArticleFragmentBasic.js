@@ -1,5 +1,6 @@
 import moment from 'moment'
 import Link from 'next/link'
+import Image from 'next/image'
 import { findElementsInContentJson } from '../../utils/ContentUtil';
 import ResourceResolver from '../../utils/ResourceResolver';
 import RenderContentElement from '../RenderContent/RenderContentElement';
@@ -9,11 +10,23 @@ export default function ArticleFragmentBasic({cobaltData}) {
 
     const pubTime = moment(cobaltData.object.data.pubInfo.publicationTime).format('MMMM D, YYYY');
 
-    let mainPictureUrl = null;
-    try {
-        mainPictureUrl = ResourceResolver(cobaltData.pageContext.resourcesUrls[cobaltData.object.data.links.system.mainPicture[0].targetId])
-    } catch (e) { }
+    let mainPictureId = null;
+    let mainPictureWidth = null;
+    let mainPictureHeight = null;
+    try{
+        mainPictureId = cobaltData.object.data.links.system.mainPicture[0].targetId;
+        mainPictureWidth = cobaltData.pageContext.nodes[mainPictureId].files.content.metadata.imageInfo.width;
+        mainPictureHeight = cobaltData.pageContext.nodes[mainPictureId].files.content.metadata.imageInfo.height;
+    } catch(e){
+        //nothing
+    }
 
+    let mainPictureUrl = null;
+    if (mainPictureId){
+        try {
+            mainPictureUrl = ResourceResolver(cobaltData.pageContext.resourcesUrls[mainPictureId])
+        } catch (e) { }
+    }
     if (!mainPictureUrl) {
         mainPictureUrl = '/img/nothumb.jpg';
     }
@@ -37,7 +50,10 @@ export default function ArticleFragmentBasic({cobaltData}) {
             <h4 className="GLsectionLabel">&nbsp;</h4>
             <div className="GLlatestStoryTop" style={{ width: '100%' }}>
                 <figure className="GLstoryFigure">
-                    <img src={mainPictureUrl} title="" />
+                    {mainPictureWidth && mainPictureHeight?
+                        <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight}/>:
+                        <img src={mainPictureUrl} title="" />
+                    }
                     <div className="GLstoryImageCaption">
                         <div className="GLstoryImageCaptionInner">
                             <p>Tigre caption</p>

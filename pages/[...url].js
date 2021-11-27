@@ -1,6 +1,6 @@
 import DWP from "../components/Page/DWP/DWP";
 import Layout from "../components/Layout/Layout";
-import { getCobaltPage } from "../lib/cobalt-cms/cobalt-api";
+import { getCobaltPage, getCobaltSite } from "../lib/cobalt-cms/cobalt-api";
 import GenericDetails from "../components/Page/Details/GenericDetails";
 import { getCobaltDataHelper } from "../lib/cobalt-cms/cobalt-helpers";
 
@@ -42,7 +42,16 @@ export default function Page ( {responseData,url } ){
 
 
 export async function getStaticPaths({}) {
-    const paths = []
+
+    const response = await getCobaltSite();
+    let paths = [];
+    try {
+        paths = response.root.items.map((item) => {
+            return item.uri
+        })
+    } catch(e){
+        // nothing
+    }
     return {
         paths,
         fallback: 'blocking'

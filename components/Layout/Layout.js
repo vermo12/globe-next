@@ -10,14 +10,14 @@ export default function Layout(props) {
 
             <NavBar {...props} />
 
-            <div class="container">
-                <div class="row row-offcanvas row-offcanvas-left">
+            <div className="container">
+                <div className="row row-offcanvas row-offcanvas-left">
 
                     <SideBar {...props} />
 
                     <SectionNavigation {...props} />
 
-                    <div id="GLmain" class="col-xs-12 col-sm-9">
+                    <div id="GLmain" className="col-xs-12 col-sm-9">
 
                         {['section','home'].includes(props.pageType)?<Header {...props} />:null}
 

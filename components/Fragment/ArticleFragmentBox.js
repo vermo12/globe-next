@@ -39,7 +39,7 @@ export default function ArticleFragmentBox({ cobaltData }) {
                     <a>{headline}</a>
                 </Link>
             </h2>
-            <div className="GLstoryLocation"><time datetime={pubTime}>{pubTime}</time></div>
+            <div className="GLstoryLocation"><time dateTime={pubTime}>{pubTime}</time></div>
             <figure className="GLstoryFigure"><img src={mainPictureUrl} title="" draggable="false" /></figure>
             <div className="GLstoryMediaInfo"><i className="fa fa-eye"></i> 150</div>
         </li>

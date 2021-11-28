@@ -33,8 +33,8 @@ export default function WebContainerFragment({ cobaltData }) {
                 <div className="flexsliderGL4horizontalStoryCarousel carousel">
                     <div className="flex-viewport" style={{overflow: 'hidden',position: 'relative'}}></div>
                     <ul className="flex-direction-nav">
-                        <li className="flex-nav-prev"><a className="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li>
-                        <li className="flex-nav-next"><a className="flex-next flex-disabled" href="#" tabindex="-1">Next</a></li>
+                        <li className="flex-nav-prev"><a className="flex-prev flex-disabled" href="#" tabIndex="-1">Previous</a></li>
+                        <li className="flex-nav-next"><a className="flex-next flex-disabled" href="#" tabIndex="-1">Next</a></li>
                     </ul>
                     <div className="flex-viewport" style={{overflow: 'hidden', position: 'relative'}}>
                         <ul className="slides" style={{width: '800%', transitionDuration: '0s', transform: 'translate3d(0px, 0px, 0px)'}}>
@@ -42,8 +42,8 @@ export default function WebContainerFragment({ cobaltData }) {
                         </ul>
                     </div>
                     <ul className="flex-direction-nav">
-                        <li className="flex-nav-prev"><a className="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li>
-                        <li className="flex-nav-next"><a className="flex-next flex-disabled" href="#" tabindex="-1">Next</a></li>
+                        <li className="flex-nav-prev"><a className="flex-prev flex-disabled" href="#" tabIndex="-1">Previous</a></li>
+                        <li className="flex-nav-next"><a className="flex-next flex-disabled" href="#" tabIndex="-1">Next</a></li>
                     </ul>
                 </div>
             </div>

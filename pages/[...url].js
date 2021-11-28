@@ -4,7 +4,7 @@ import { getCobaltPage, getCobaltSite } from "../lib/cobalt-cms/cobalt-api";
 import GenericDetails from "../components/Page/Details/GenericDetails";
 import { getCobaltDataHelper } from "../lib/cobalt-cms/cobalt-helpers";
 
-export default function Page ( {responseData,url } ){
+export default function Page ( {responseData, siteStructure, url } ){
 
     const cobaltData = {
         object: {
@@ -17,6 +17,9 @@ export default function Page ( {responseData,url } ){
           nodes: responseData.model.nodes,
           resourcesUrls: responseData.resourcesUrls,
           nodesUrls: responseData.nodesUrls
+        },
+        siteContext: {
+            siteStructure
         }
       }
 
@@ -33,7 +36,7 @@ export default function Page ( {responseData,url } ){
     }
 
     return (
-        <Layout pageType={pageType}>
+        <Layout siteStructure={cobaltData.siteContext.siteStructure} pageType={pageType}>
            {render}
         </Layout>
       )
@@ -63,9 +66,11 @@ export async function getStaticProps({ params }) {
     const url = params.url.join('/');
     
     const responseData = await getCobaltPage(url);
+    const siteStructure = await getCobaltSite();
     
     const props = {
         responseData,
+        siteStructure,
         url
     };
 

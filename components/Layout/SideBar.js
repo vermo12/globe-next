@@ -1,4 +1,18 @@
-export default function SideBar(props) {
+import Link from 'next/link'
+
+export default function SideBar({ siteStructure }) {
+    let sectionsRender = null;
+    try {
+        sectionsRender = siteStructure.root.items.map((item) => (
+            <li>
+                <Link href={item.uri}>
+                    <a>{item.title}</a>
+                </Link>
+            </li>
+        ))
+    } catch (e) {
+
+    }
     const render = (
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <div class="GLnavSocial">
@@ -28,10 +42,10 @@ export default function SideBar(props) {
             </div>
             <div class="GLnavSearch">
 
-                <form action="/search" id="search">
+                {/* <form action="/search" id="search">
                     <input id="query" name="query" type="text" autocomplete="off" onblur="this.placeholder = 'SEARCH'" placeholder="Search" color="#ffffff" size="40" onfocus="this.placeholder = ''" />
                     <input id="baseTypes" name="baseTypes" type="hidden" value="article" />
-                </form>
+                </form> */}
 
             </div>
 
@@ -44,25 +58,12 @@ export default function SideBar(props) {
                     <a href="#modalSignIn" id="modalSignInButton">log in</a>
                 </li>
 
-
                 <li>
-                    <a href="/">Home</a>
+                    <Link href="/">
+                        <a>Home</a>
+                    </Link>
                 </li>
-                <li>
-                    <a href="/art/">Art</a>
-                </li>
-                <li>
-                    <a href="/world/">world</a>
-                </li>
-                <li>
-                    <a href="/business/">business</a>
-                </li>
-                <li>
-                    <a href="/sport/">sport</a>
-                </li>
-                <li>
-                    <a href="/foreign/">foreign</a>
-                </li>
+                {sectionsRender}
                 <li class="GLnavSpecial">
                     <a href="/rss.xml"><i class="fa fa-rss"></i> rss</a>
                 </li>

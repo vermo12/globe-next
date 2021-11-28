@@ -14,7 +14,9 @@ export default function GenericFragment({cobaltData}) {
             if (!linkTemplate)
             {
                 switch(linkZone) {
-                    case "main" || "header" || "fooger":
+                    case "main":
+                    case "header":
+                    case "footer":
                         render = <ArticleFragmentBasic cobaltData={cobaltData}/>;
                         break;
                     case "box":

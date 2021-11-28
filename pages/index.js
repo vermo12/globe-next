@@ -22,8 +22,6 @@ export default function Home({ responseData, siteStructure, url }) {
     }
   }
 
-  console.log(cobaltData.object.helper)
-
   return (
     <Layout siteStructure={cobaltData.siteContext.siteStructure} pageType='home'>
         <DWP cobaltData={cobaltData}/>

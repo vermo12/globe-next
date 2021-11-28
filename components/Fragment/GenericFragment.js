@@ -1,35 +1,41 @@
-import ArticleFragmentBasic from "./ArticleFragmentBasic";
+import ArticleFragment1colBig from "./ArticleFragment1colBig";
+import ArticleFragmentDefault from "./ArticleFragmentDefault";
 import ArticleFragmentBox from "./ArticleFragmentBox";
 import WebContainerFragment from "./WebContainerFragment";
 
 export default function GenericFragment({cobaltData}) {
    
-    const type = cobaltData.object.data.sys.type;
+    const baseType = cobaltData.object.data.sys.baseType;
     const linkZone = cobaltData.linkContext.linkData.zone;
     const linkTemplate = cobaltData.linkContext.linkData.template;
     let render = null;
 
-    switch (type) {
+    switch (baseType) {
         case "article":
-            if (!linkTemplate)
-            {
+            if (!linkTemplate){
                 switch(linkZone) {
                     case "main":
                     case "header":
                     case "footer":
-                        render = <ArticleFragmentBasic cobaltData={cobaltData}/>;
+                        render = <ArticleFragmentDefault cobaltData={cobaltData}/>;
                         break;
                     case "box":
                         render = <ArticleFragmentBox cobaltData={cobaltData}/>;
                         break;
                 }
-            }       
+            } else {
+                switch(linkTemplate) {
+                    case "1col_big":
+                        render = <ArticleFragment1colBig cobaltData={cobaltData}/>
+                        break;
+                }
+            }      
             break;
-        case "box":
+        case "webpagefragment":
             render = <WebContainerFragment cobaltData={cobaltData}/>;
             break;
         default:
-            render = <p>No template found!</p>;
+            render = <p>No template found! {baseType + "/" + linkZone + "/" + linkTemplate}</p>;
 
     }
     return render;

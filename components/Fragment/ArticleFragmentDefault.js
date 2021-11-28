@@ -6,7 +6,7 @@ import ResourceResolver from '../../utils/ResourceResolver';
 import RenderContentElement from '../RenderContent/RenderContentElement';
 import RenderFormattedText from '../RenderContent/RenderFormattedText';
 
-export default function ArticleFragmentBasic({cobaltData}) {
+export default function ArticleFragmentDefault({cobaltData}) {
 
     const pubTime = moment(cobaltData.object.data.pubInfo.publicationTime).format('MMMM D, YYYY');
 

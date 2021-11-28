@@ -1,1 +1,1 @@
-export const COMMON_DATA_CACHE_TTL_MINUTES = 60;
+export const COMMON_DATA_CACHE_TTL_MINUTES = 10;

@@ -181,20 +181,20 @@ function Poll({ jsonElement }) {
     try {
         const question = <RenderFormattedText jsonElement={jsonElement.elements.filter((el) => el.name === 'question')[0]}/>
         render = (
-            <div class="GLpoll left">
+            <div className="GLpoll left">
 
                 <div className="GLpollLabel">{question}</div>
                 <div id="alreadyVoted"></div>
                 <div className="GLpollOption">
                     <form action="#" className="em-poll" method="post" id={jsonElement.attributes['data-poll-id']}>
-                        {jsonElement.elements.filter((el) => el.name === 'answers')[0].elements.map((el) => {
+                        {jsonElement.elements.filter((el) => el.name === 'answers')[0].elements.map((el,i) => {
                             return (
-                                <div className="radio">
+                                <div key={i} className="radio">
                                     <input type="radio" 
                                         name={"answerId-"+jsonElement.attributes['data-poll-id']} 
                                         id={el.attributes['data-answer-id']} 
                                         value={el.attributes['data-answer-id']} />
-                                        <label for={el.attributes['data-answer-id']}>{el.elements.map((el2) => <RenderFormattedText jsonElement={el2}/>)}</label>
+                                        <label htmlFor={el.attributes['data-answer-id']}>{el.elements.map((el2,j) => <RenderFormattedText key={j} jsonElement={el2}/>)}</label>
                                 </div>        
                             )
                         })}

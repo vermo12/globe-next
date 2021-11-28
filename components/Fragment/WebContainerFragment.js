@@ -4,7 +4,7 @@ import GenericFragment from "./GenericFragment"
 export default function WebContainerFragment({ cobaltData }) {
 
     const zonesRender = cobaltData.object.helper.zones.map((zone) => 
-        zone.objects.map((object) => {
+        zone.objects.map((object, i) => {
             // Here we need to build the cobaltData for each object
             const objNodeData = cobaltData.pageContext.nodes[object.objectId]
             const objCobaltData = {
@@ -18,7 +18,7 @@ export default function WebContainerFragment({ cobaltData }) {
                 pageContext: cobaltData.pageContext
             }
             return (
-                <GenericFragment cobaltData={objCobaltData}/>
+                <GenericFragment key={i} cobaltData={objCobaltData}/>
             )
         }))
   

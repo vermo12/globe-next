@@ -3,8 +3,8 @@ import { getCobaltDataHelper } from "../../../lib/cobalt-cms/cobalt-helpers";
 import GenericFragment from '../../Fragment/GenericFragment';
 
 export default function DWP({ cobaltData }) {
-    const zonesRender = cobaltData.object.helper.zones.map((zone) => 
-        zone.objects.map((object) => {
+    const zonesRender = cobaltData.object.helper.zones.map((zone,i) => 
+        zone.objects.map((object,j) => {
             // Here we need to build the cobaltData for each object
             const objNodeData = cobaltData.pageContext.nodes[object.objectId]
             const objCobaltData = {
@@ -18,14 +18,14 @@ export default function DWP({ cobaltData }) {
                 pageContext: cobaltData.pageContext
             }
             return (
-                <GenericFragment cobaltData={objCobaltData}/>
+                <GenericFragment key={"" + i + j} cobaltData={objCobaltData}/>
             )
         }))
 
 
     return (
         <div>
-            <section class="GLsection">
+            <section className="GLsection">
                 <ul>
                     {zonesRender}
                 </ul>

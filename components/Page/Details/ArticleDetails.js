@@ -36,8 +36,8 @@ export default function ArticleDetails({ cobaltData }) {
             <h1 className="GLstoryTitle">{headline}</h1>
             <figure className="GLstoryFigure">
                 <img src={mainPictureUrl} title=""/>
-                <div class ="GLstoryImageCaption">
-                <div class ="GLstoryImageCaptionInner">
+                <div className="GLstoryImageCaption">
+                <div className="GLstoryImageCaptionInner">
                 <p>Tigre caption</p>
                 </div>
                 </div>
@@ -60,7 +60,7 @@ export default function ArticleDetails({ cobaltData }) {
             </div>
 
             <div className="GLstoryLocation">
-                <time datetime="{pubTime}">
+                <time dateTime="{pubTime}">
                     {pubTime}
                 </time>
             </div>

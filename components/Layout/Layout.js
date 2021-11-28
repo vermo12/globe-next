@@ -6,7 +6,7 @@ import Aside from "./Aside";
 
 export default function Layout(props) {
     const layout = (
-        <div class="page-container">
+        <div className="page-container">
 
             <NavBar {...props} />
 

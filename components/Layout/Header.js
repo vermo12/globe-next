@@ -5,13 +5,13 @@ export default function Header(props) {
     const timeString = date.getHours() + ':' + date.getMinutes();
 
     const render = (
-        <div class="GLhead">
-            <time class="GLheadDate">
+        <div className="GLhead">
+            <time className="GLheadDate">
                 <p id="GLdate">{dateString}</p>
                 <p id="GLhour">{timeString}</p>
             </time>
-            <h1 class="GLheadTitle"></h1>
-            <h2 class="GLheadSectionLabel">Express Website</h2>
+            <h1 className="GLheadTitle"></h1>
+            <h2 className="GLheadSectionLabel">Express Website</h2>
             <div id="GLweather"></div>
         </div>
     )

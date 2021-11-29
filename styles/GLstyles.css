@@ -1752,7 +1752,7 @@
   }
   .pag-Home span, .pag-News span, .pag-Politics span, .pag-Business span,
   .pag-Foreign span, .pag-Sport span, .pag-Football span, .pag-Basket span,
-  .pag-Tennis span, .pag-Golf span, .pag-Art span, {
+  .pag-Tennis span, .pag-Golf span, .pag-Art span {
     background-image: none;
   }
   .pag-Home .GLsectionPrev:hover span, .pag-Home .GLsectionNext:hover span,
@@ -4391,7 +4391,7 @@
       z-index: 3;
       color: white;
       font-weight: bold;
-    &:before {
+   /*  &:before {
       content:"";
       position: absolute;
       display: block;
@@ -4414,7 +4414,7 @@
       border-right:12px solid transparent;
       border-left: 0px solid transparent;
       border-top: 30px solid #FFEA00;
-    }
+    } */
   }
   
   #breaking-news-colour {
@@ -4431,14 +4431,15 @@
       top: 0px;
       z-index: 9999999;
       left: 0px;
-    &:before {
+    
+    /* &:before {
       content: "";
       width: 30px;
       height: 30px;
       background-color: #3399FF;
       position: absolute;
       z-index: 2;
-    }
+    } */
   }
   
   .animated {

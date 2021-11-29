@@ -1,5 +1,5 @@
-- dwc
-- sections + menu api / caching
+- manage image crops/formats
+- integrate with react component library (Material UI?), encapsulate CSS, manage responsive
 - integrate external data
 - paywall
 - tags/categories
@@ -14,8 +14,7 @@ processCobaltResponse(response, url){
     
 }
 
-RENDER OBJECT PROPS:
-
+RENDER OBJECT PROPS STRUCTURE:
 {
     object: {
         data,
@@ -30,5 +29,8 @@ RENDER OBJECT PROPS:
             theme,
             etc        
         }
+    }
+    siteContext: {
+        siteStructure
     }
 }

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { findElementsInContentJson } from "../../../utils/ContentUtil";
 import ResourceResolver from "../../../utils/ResourceResolver";
 import RenderContentElement from "../../RenderContent/RenderContentElement";
-import { IMAGE_PLACEHOLDER } from "../../../apps.settings";
+import { COMMON_USE_NEXT_IMAGE, IMAGE_PLACEHOLDER } from "../../../apps.settings";
 
 export default function ArticleDetails({ cobaltData }) {
 
@@ -49,7 +49,7 @@ export default function ArticleDetails({ cobaltData }) {
         <article className="GLcontent" href={cobaltData.pageContext.nodesUrls[cobaltData.object.data.id]} data-index="0">
             <h1 className="GLstoryTitle">{headline}</h1>
             <figure className="GLstoryFigure">
-                {mainPictureWidth && mainPictureHeight ?
+                {mainPictureWidth && mainPictureHeight && COMMON_USE_NEXT_IMAGE ?
                     <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} priority={true} alt="" /> :
                     <img src={mainPictureUrl} title="" alt="" />
                 }

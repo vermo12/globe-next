@@ -5,7 +5,7 @@ import { findElementsInContentJson } from '../../utils/ContentUtil';
 import ResourceResolver from '../../utils/ResourceResolver';
 import RenderContentElement from '../RenderContent/RenderContentElement';
 import RenderFormattedText from '../RenderContent/RenderFormattedText';
-import { IMAGE_PLACEHOLDER } from '../../apps.settings';
+import { COMMON_USE_NEXT_IMAGE, IMAGE_PLACEHOLDER } from '../../apps.settings';
 
 export default function ArticleFragmentDefault({cobaltData}) {
 
@@ -51,7 +51,7 @@ export default function ArticleFragmentDefault({cobaltData}) {
             <h4 className="GLsectionLabel">&nbsp;</h4>
             <div className="GLlatestStoryTop" style={{ width: '100%' }}>
                 <figure className="GLstoryFigure">
-                    {mainPictureWidth && mainPictureHeight  && false?
+                    {mainPictureWidth && mainPictureHeight  && COMMON_USE_NEXT_IMAGE?
                         <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} alt="" />:
                         <img src={mainPictureUrl} title="" alt=""/>
                     }

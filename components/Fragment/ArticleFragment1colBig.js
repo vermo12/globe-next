@@ -3,7 +3,7 @@ import Image from 'next/image'
 import ResourceResolver from '../../utils/ResourceResolver';
 import RenderContentElement from '../RenderContent/RenderContentElement';
 import { findElementsInContentJson } from '../../utils/ContentUtil';
-import { IMAGE_PLACEHOLDER } from '../../apps.settings';
+import { COMMON_USE_NEXT_IMAGE, IMAGE_PLACEHOLDER } from '../../apps.settings';
 
 export default function ArticleFragment1colBig({ cobaltData }) {
 
@@ -45,7 +45,7 @@ export default function ArticleFragment1colBig({ cobaltData }) {
                     </Link>
                 </h2>
                 <figure className="GLstoryFigure">
-                    {mainPictureWidth && mainPictureHeight ?
+                    {mainPictureWidth && mainPictureHeight && COMMON_USE_NEXT_IMAGE ?
                         <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} priority={true} alt="" /> :
                         <img src={mainPictureUrl} title="" alt=""/>
                     }

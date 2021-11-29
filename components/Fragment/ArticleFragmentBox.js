@@ -5,7 +5,7 @@ import { findElementsInContentJson } from '../../utils/ContentUtil';
 import ResourceResolver from '../../utils/ResourceResolver';
 import RenderContentElement from '../RenderContent/RenderContentElement';
 import RenderFormattedText from '../RenderContent/RenderFormattedText';
-import { IMAGE_PLACEHOLDER } from '../../apps.settings';
+import { COMMON_USE_NEXT_IMAGE, IMAGE_PLACEHOLDER } from '../../apps.settings';
 
 export default function ArticleFragmentBox({ cobaltData }) {
 
@@ -54,7 +54,7 @@ export default function ArticleFragmentBox({ cobaltData }) {
                 </Link>
             </h2>
             <div className="GLstoryLocation"><time dateTime={pubTime}>{pubTime}</time></div>
-            <figure className="GLstoryFigure"> {mainPictureWidth && mainPictureHeight ?
+            <figure className="GLstoryFigure"> {mainPictureWidth && mainPictureHeight && COMMON_USE_NEXT_IMAGE ?
                         <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} alt="" /> :
                         <img src={mainPictureUrl} title="" alt=""/>
                     }</figure>

@@ -3,7 +3,7 @@ import ArticleFragmentDefault from "./ArticleFragmentDefault";
 import ArticleFragmentBox from "./ArticleFragmentBox";
 import WebContainerFragment from "./WebContainerFragment";
 
-export default function GenericFragment({cobaltData}) {
+export default function GenericFragment({cobaltData,index}) {
    
     const baseType = cobaltData.object.data.sys.baseType;
     const linkZone = cobaltData.linkContext.linkData.zone;
@@ -17,7 +17,7 @@ export default function GenericFragment({cobaltData}) {
                     case "main":
                     case "header":
                     case "footer":
-                        render = <ArticleFragmentDefault cobaltData={cobaltData}/>;
+                        render = <ArticleFragmentDefault cobaltData={cobaltData} index={index}/>;
                         break;
                     case "box":
                         render = <ArticleFragmentBox cobaltData={cobaltData}/>;

@@ -7,7 +7,7 @@ import RenderContentElement from '../RenderContent/RenderContentElement';
 import RenderFormattedText from '../RenderContent/RenderFormattedText';
 import { COMMON_USE_NEXT_IMAGE, IMAGE_PLACEHOLDER } from '../../apps.settings';
 
-export default function ArticleFragmentDefault({cobaltData}) {
+export default function ArticleFragmentDefault({cobaltData, index}) {
 
     const pubTime = moment(cobaltData.object.data.pubInfo.publicationTime).format('MMMM D, YYYY');
 
@@ -32,6 +32,8 @@ export default function ArticleFragmentDefault({cobaltData}) {
         mainPictureUrl = '/img/nothumb.jpg';
     }
 
+    const picturePriority = (index <= 3?true:false)
+
     let headline = null;
     try {
         headline = <RenderContentElement jsonElement={findElementsInContentJson(['headline'], cobaltData.object.helper.content)[0]} renderMode='teaser'/>
@@ -52,7 +54,7 @@ export default function ArticleFragmentDefault({cobaltData}) {
             <div className="GLlatestStoryTop" style={{ width: '100%' }}>
                 <figure className="GLstoryFigure">
                     {mainPictureWidth && mainPictureHeight  && COMMON_USE_NEXT_IMAGE?
-                        <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} alt="" />:
+                        <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} priority={picturePriority} alt="" />:
                         <img src={mainPictureUrl} title="" alt=""/>
                     }
                     <div className="GLstoryImageCaption">

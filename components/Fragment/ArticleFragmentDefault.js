@@ -51,7 +51,7 @@ export default function ArticleFragmentDefault({cobaltData}) {
             <h4 className="GLsectionLabel">&nbsp;</h4>
             <div className="GLlatestStoryTop" style={{ width: '100%' }}>
                 <figure className="GLstoryFigure">
-                    {mainPictureWidth && mainPictureHeight?
+                    {mainPictureWidth && mainPictureHeight  && false?
                         <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} alt="" />:
                         <img src={mainPictureUrl} title="" alt=""/>
                     }

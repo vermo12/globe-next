@@ -55,7 +55,7 @@ export default function ArticleFragmentBox({ cobaltData }) {
             </h2>
             <div className="GLstoryLocation"><time dateTime={pubTime}>{pubTime}</time></div>
             <figure className="GLstoryFigure"> {mainPictureWidth && mainPictureHeight ?
-                        <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} priority={true} alt="" /> :
+                        <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} alt="" /> :
                         <img src={mainPictureUrl} title="" alt=""/>
                     }</figure>
             <div className="GLstoryMediaInfo"><i className="fa fa-eye"></i> 150</div>

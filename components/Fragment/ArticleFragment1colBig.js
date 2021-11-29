@@ -46,7 +46,7 @@ export default function ArticleFragment1colBig({ cobaltData }) {
                 </h2>
                 <figure className="GLstoryFigure">
                     {mainPictureWidth && mainPictureHeight ?
-                        <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} alt="" /> :
+                        <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} priority={true} alt="" /> :
                         <img src={mainPictureUrl} title="" alt=""/>
                     }
                 </figure>

@@ -52,7 +52,7 @@ export default function ArticleFragmentDefault({cobaltData}) {
             <div className="GLlatestStoryTop" style={{ width: '100%' }}>
                 <figure className="GLstoryFigure">
                     {mainPictureWidth && mainPictureHeight?
-                        <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} alt="" />:
+                        <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} priority={true} alt="" />:
                         <img src={mainPictureUrl} title="" alt=""/>
                     }
                     <div className="GLstoryImageCaption">

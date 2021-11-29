@@ -50,7 +50,7 @@ export default function ArticleDetails({ cobaltData }) {
             <h1 className="GLstoryTitle">{headline}</h1>
             <figure className="GLstoryFigure">
                 {mainPictureWidth && mainPictureHeight ?
-                    <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} alt="" /> :
+                    <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} priority={true} alt="" /> :
                     <img src={mainPictureUrl} title="" alt="" />
                 }
                 <div className="GLstoryImageCaption">

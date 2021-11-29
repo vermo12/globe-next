@@ -5,7 +5,7 @@ export default function GenericDetails({ cobaltData }){
         <p>no details template found!</p>
     )
 
-    switch(cobaltData.object.data.sys.type){
+    switch(cobaltData.object.data.sys.baseType){
         case "article":
             details = <ArticleDetails cobaltData={cobaltData}/>
     }

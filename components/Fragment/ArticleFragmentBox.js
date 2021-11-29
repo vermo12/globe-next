@@ -1,19 +1,33 @@
 import moment from 'moment'
 import Link from 'next/link'
+import Image from 'next/image'
 import { findElementsInContentJson } from '../../utils/ContentUtil';
 import ResourceResolver from '../../utils/ResourceResolver';
 import RenderContentElement from '../RenderContent/RenderContentElement';
 import RenderFormattedText from '../RenderContent/RenderFormattedText';
+import { IMAGE_PLACEHOLDER } from '../../apps.settings';
 
 export default function ArticleFragmentBox({ cobaltData }) {
 
     const pubTime = moment(cobaltData.object.data.pubInfo.publicationTime).format('MMMM D, YYYY');
 
-    let mainPictureUrl = null;
+    let mainPictureId = null;
+    let mainPictureWidth = null;
+    let mainPictureHeight = null;
     try {
-        mainPictureUrl = ResourceResolver(cobaltData.pageContext.resourcesUrls[cobaltData.object.data.links.system.mainPicture[0].targetId])
-    } catch (e) { }
+        mainPictureId = cobaltData.object.data.links.system.mainPicture[0].targetId;
+        mainPictureWidth = cobaltData.pageContext.nodes[mainPictureId].files.content.metadata.imageInfo.width;
+        mainPictureHeight = cobaltData.pageContext.nodes[mainPictureId].files.content.metadata.imageInfo.height;
+    } catch (e) {
+        //nothing
+    }
 
+    let mainPictureUrl = null;
+    if (mainPictureId) {
+        try {
+            mainPictureUrl = ResourceResolver(cobaltData.pageContext.resourcesUrls[mainPictureId])
+        } catch (e) { }
+    }
     if (!mainPictureUrl) {
         mainPictureUrl = '/img/nothumb.jpg';
     }
@@ -40,7 +54,10 @@ export default function ArticleFragmentBox({ cobaltData }) {
                 </Link>
             </h2>
             <div className="GLstoryLocation"><time dateTime={pubTime}>{pubTime}</time></div>
-            <figure className="GLstoryFigure"><img src={mainPictureUrl} title="" draggable="false" /></figure>
+            <figure className="GLstoryFigure"> {mainPictureWidth && mainPictureHeight ?
+                        <Image src={mainPictureUrl} width={mainPictureWidth} height={mainPictureHeight} placeholder="blur" blurDataURL={IMAGE_PLACEHOLDER} alt="" /> :
+                        <img src={mainPictureUrl} title="" alt=""/>
+                    }</figure>
             <div className="GLstoryMediaInfo"><i className="fa fa-eye"></i> 150</div>
         </li>
     )

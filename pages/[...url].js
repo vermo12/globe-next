@@ -1,27 +1,9 @@
 import DWP from "../components/Page/DWP/DWP";
 import Layout from "../components/Layout/Layout";
-import { getCobaltPage, getCobaltSite } from "../lib/cobalt-cms/cobalt-api";
+import { getCobaltPageByUrl, getCobaltSite } from "../lib/cobalt-cms/cobalt-api";
 import GenericDetails from "../components/Page/Details/GenericDetails";
-import { getCobaltDataHelper } from "../lib/cobalt-cms/cobalt-helpers";
 
-export default function Page ( {responseData, siteStructure, url } ){
-
-    const cobaltData = {
-        object: {
-          data: responseData.model.data,
-          helper: getCobaltDataHelper(responseData.model.data),
-        },
-        linkContext: null,
-        pageContext: {
-          url: url,
-          nodes: responseData.model.nodes,
-          resourcesUrls: responseData.resourcesUrls,
-          nodesUrls: responseData.nodesUrls
-        },
-        siteContext: {
-            siteStructure
-        }
-      }
+export default function Page ( {cobaltData} ){
 
     let render = null;
     let pageType = null;
@@ -65,18 +47,15 @@ export async function getStaticProps({ params }) {
     console.log('RENDERING: ' + params.url.join('/'));
     const url = params.url.join('/');
     
-    const responseData = await getCobaltPage(url);
-    const siteStructure = await getCobaltSite();
+    const cobaltData = await getCobaltPageByUrl(url);
     
     const props = {
-        responseData,
-        siteStructure,
-        url
+        cobaltData
     };
 
     let revalidate = 60;
 
-    switch (responseData.model.data.sys.baseType){
+    switch (cobaltData.object.data.sys.baseType){
         case 'webpage':                       
             revalidate = 5;
             break;
